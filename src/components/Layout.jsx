@@ -13,15 +13,26 @@ const Tag = styled.span`
   font-family: "La Belle Aurore", cursive;
   font-size: 1.125rem;
   color: var(--light-yellow);
-  opacity: 0.6;
-  position: absolute;
-  bottom: ${(props) => (props.position === "top" ? "auto" : "0")};
   left: 120px;
+  margin-left: ${(props) =>
+    props.leftmargin === "negative"
+      ? "-20px"
+      : props.leftmargin === "positive"
+      ? "20px"
+      : ""};
 `;
 
-const HTMLTag = styled(Tag)`
-  position: static;
-  margin-left: -20px;
+const TopTag = styled(Tag)`
+  position: absolute;
+  top: 35px;
+  left: 100px;
+  opacity: 0.6;
+`;
+
+const BottomTag = styled(Tag)`
+  position: absolute;
+  bottom: 0;
+  opacity: 0.6;
 `;
 
 const Layout = () => {
@@ -29,17 +40,17 @@ const Layout = () => {
     <App>
       <Sidebar />
       <Page>
-        <Tag position="top">
+        <TopTag>
+          &lt;html&gt;
           <br />
-          &lt;body&gt;
-          <HTMLTag position="top">&lt;html&gt;</HTMLTag>
-        </Tag>
+          <Tag leftmargin="positive">&lt;body&gt;</Tag>
+        </TopTag>
 
-        <Tag>
+        <BottomTag>
           &lt;/body&gt;
           <br />
-          <HTMLTag>&lt;/html&gt;</HTMLTag>
-        </Tag>
+          <Tag leftmargin="negative">&lt;/html&gt;</Tag>
+        </BottomTag>
       </Page>
     </App>
   );
