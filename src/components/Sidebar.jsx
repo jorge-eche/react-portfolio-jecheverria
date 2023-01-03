@@ -53,7 +53,7 @@ const JELogo = styled.img`
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: var(--gun-powder);
-  animation-iteration-count: 3;
+  animation-iteration-count: 2;
 `;
 
 const PageLink = styled.a`
