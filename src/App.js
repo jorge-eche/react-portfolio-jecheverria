@@ -43,7 +43,6 @@ const Tag = styled.span`
   font-family: "La Belle Aurore", cursive;
   font-size: 1.125rem;
   color: var(--light-yellow);
-  left: 120px;
   margin-left: ${(props) =>
     props.leftmargin === "negative"
       ? "-20px"
@@ -72,6 +71,7 @@ const TopTag = styled(Tag)`
 
 const BottomTag = styled(Tag)`
   position: absolute;
+  left: 120px;
   bottom: 0;
   opacity: 0;
   animation: fadeInTag 1s forwards;
@@ -90,9 +90,10 @@ const BottomTag = styled(Tag)`
 const Header = styled.header`
   margin-top: 100px;
   margin-left: 60px;
+  text-align: center;
   opacity: 0;
   animation: fadeIn 1s forwards;
-  animation-delay: 1s;
+  animation-delay: 1.3s;
 
   @keyframes fadeIn {
     from {

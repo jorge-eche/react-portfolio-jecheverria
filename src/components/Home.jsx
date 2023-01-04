@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 const Title1 = styled.h1`
+  position: relative;
+  text-indent: 0px;
   font-size: 3.3rem;
   line-height: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
+  margin-left: -40px;
 
   &:before {
     content: "<h1>";
@@ -12,6 +15,9 @@ const Title1 = styled.h1`
     font-size: 1.125rem;
     color: var(--light-yellow);
     opacity: 0.6;
+    position: relative;
+    top: -50px;
+    left: -30px;
   }
 
   &:after {
@@ -20,6 +26,9 @@ const Title1 = styled.h1`
     font-size: 1.125rem;
     color: var(--light-yellow);
     opacity: 0.6;
+    position: relative;
+    top: 20px;
+    left: 30px;
   }
 
   span {
@@ -28,15 +37,19 @@ const Title1 = styled.h1`
   }
 `;
 
+const Button = styled.button`
+  border: ;
+`;
+
 const Home = () => {
   return (
     <>
       <Title1>
-        Hi!
+        Hello!
         <br /> My name is <span>Jorge Echeverria</span> <br />
         I'm a Frontend Developer
       </Title1>
-      <button>Contact Me</button>
+      <Button>Contact Me</Button>
     </>
   );
 };
