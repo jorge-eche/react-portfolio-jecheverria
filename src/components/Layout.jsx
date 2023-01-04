@@ -37,7 +37,7 @@ const BottomTag = styled(Tag)`
 
 const Layout = () => {
   return (
-    <App>
+    <>
       <Sidebar />
       <Page>
         <TopTag>
@@ -52,7 +52,7 @@ const Layout = () => {
           <Tag leftmargin="negative">&lt;/html&gt;</Tag>
         </BottomTag>
       </Page>
-    </App>
+    </>
   );
 };
 
