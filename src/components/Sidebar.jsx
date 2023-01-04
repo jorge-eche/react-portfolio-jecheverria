@@ -53,8 +53,6 @@ const JELogo = styled.img`
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: var(--gun-powder);
-  animation-iteration-count: 2;
-  animation-delay: 2s;
 `;
 
 const PageLink = styled.a`
@@ -122,31 +120,19 @@ const Sidebar = () => {
 
       <Nav>
         <PageLink href="" id="home-link">
-          <StyledFontAwesomeIcon
-            icon={faHouse}
-            className="fa-beat"
-          ></StyledFontAwesomeIcon>
+          <StyledFontAwesomeIcon icon={faHouse}></StyledFontAwesomeIcon>
         </PageLink>
 
         <PageLink href="" id="about-link">
-          <StyledFontAwesomeIcon
-            icon={faUser}
-            className="fa-beat"
-          ></StyledFontAwesomeIcon>
+          <StyledFontAwesomeIcon icon={faUser}></StyledFontAwesomeIcon>
         </PageLink>
 
         <PageLink href="" id="mywork-link">
-          <StyledFontAwesomeIcon
-            icon={faFolderOpen}
-            className="fa-beat"
-          ></StyledFontAwesomeIcon>
+          <StyledFontAwesomeIcon icon={faFolderOpen}></StyledFontAwesomeIcon>
         </PageLink>
 
         <PageLink href="" id="contact-link">
-          <StyledFontAwesomeIcon
-            icon={faEnvelope}
-            className="fa-beat"
-          ></StyledFontAwesomeIcon>
+          <StyledFontAwesomeIcon icon={faEnvelope}></StyledFontAwesomeIcon>
         </PageLink>
       </Nav>
 

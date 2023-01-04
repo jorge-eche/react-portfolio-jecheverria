@@ -56,8 +56,7 @@ const TopTag = styled(Tag)`
   top: 35px;
   left: 100px;
   opacity: 0;
-  animation: fadeInTag 1s forwards;
-  animation-delay: 1s;
+  animation: fadeInTag 1s 0.5s forwards;
 
   @keyframes fadeInTag {
     from {
@@ -74,8 +73,7 @@ const BottomTag = styled(Tag)`
   left: 120px;
   bottom: 0;
   opacity: 0;
-  animation: fadeInTag 1s forwards;
-  animation-delay: 1s;
+  animation: fadeInTag 1s 0.5s forwards;
 
   @keyframes fadeInTag {
     from {
@@ -92,8 +90,8 @@ const Header = styled.header`
   margin-left: 60px;
   text-align: center;
   opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 1.3s;
+  animation: fadeIn 1s ease-in 1s forwards;
+  /* animation-delay: 1.3s; */
 
   @keyframes fadeIn {
     from {
