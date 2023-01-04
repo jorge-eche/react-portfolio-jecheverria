@@ -102,6 +102,10 @@ const ListItem = styled.li`
     display: block;
     line-height: 16px;
 
+    svg {
+      transition: all 0.3s ease-out;
+    }
+
     &:hover svg {
       color: var(--light-yellow);
     }
