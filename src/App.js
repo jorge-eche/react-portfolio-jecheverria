@@ -56,21 +56,43 @@ const TopTag = styled(Tag)`
   position: absolute;
   top: 35px;
   left: 100px;
-  opacity: 0.6;
+  opacity: 0;
+  animation: fadeInTag 1s forwards;
+  animation-delay: 1s;
+
+  @keyframes fadeInTag {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.6;
+    }
+  }
 `;
 
 const BottomTag = styled(Tag)`
   position: absolute;
   bottom: 0;
-  opacity: 0.6;
+  opacity: 0;
+  animation: fadeInTag 1s forwards;
+  animation-delay: 1s;
+
+  @keyframes fadeInTag {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.6;
+    }
+  }
 `;
 
-const Section = styled.div`
+const Header = styled.header`
   margin-top: 100px;
   margin-left: 60px;
   opacity: 0;
   animation: fadeIn 1s forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
 
   @keyframes fadeIn {
     from {
@@ -96,7 +118,7 @@ function App() {
           <Tag leftmargin="positive">&lt;body&gt;</Tag>
         </TopTag>
 
-        <Section>{isHome && <Home />}</Section>
+        <Header>{isHome && <Home />}</Header>
 
         <BottomTag>
           &lt;/body&gt;

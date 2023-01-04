@@ -4,6 +4,24 @@ const Title1 = styled.h1`
   font-size: 3.3rem;
   line-height: 5rem;
   font-family: "Coolvetica", Helvetica;
+  font-weight: 400;
+
+  &:before {
+    content: "<h1>";
+    font-family: "La Belle Aurore", cursive;
+    font-size: 1.125rem;
+    color: var(--light-yellow);
+    opacity: 0.6;
+  }
+
+  &:after {
+    content: "</h1>";
+    font-family: "La Belle Aurore", cursive;
+    font-size: 1.125rem;
+    color: var(--light-yellow);
+    opacity: 0.6;
+  }
+
   span {
     font-size: 1.3em;
     color: var(--light-yellow);
@@ -18,7 +36,6 @@ const Home = () => {
         <br /> My name is <span>Jorge Echeverria</span> <br />
         I'm a Frontend Developer
       </Title1>
-      {/* <h2>I'm a Frontend Developer</h2> */}
       <button>Contact Me</button>
     </>
   );
