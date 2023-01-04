@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Coolvetica";
+  src: url("./assets/CoolveticaRg-Regular.woff2") format("woff2");
+}
+
 #home-link::after {
   content: "HOME";
 }

@@ -68,10 +68,18 @@ const BottomTag = styled(Tag)`
 const Section = styled.div`
   margin-top: 100px;
   margin-left: 60px;
-  z-index: 1;
-  transform-style: preserve-3d;
+  opacity: 0;
   animation: fadeIn 1s forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 function App() {
