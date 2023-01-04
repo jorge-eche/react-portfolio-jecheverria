@@ -7,7 +7,7 @@ const Home = () => {
         Hi!
         <br /> My name is <span>Jorge</span> Echeverria{" "}
       </h1>
-      <h2>I am a Frontend Developer</h2>
+      <h2>I'm a Frontend Developer</h2>
     </>
   );
 };

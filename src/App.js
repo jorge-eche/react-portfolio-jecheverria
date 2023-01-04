@@ -66,13 +66,8 @@ const BottomTag = styled(Tag)`
 `;
 
 const Section = styled.div`
-  width: 100%;
-  height: 90%;
-  min-height: 566px;
-  position: absolute;
-  top: 19%;
-  left: 8%;
-  margin: 0 auto;
+  margin-top: 100px;
+  margin-left: 60px;
   z-index: 1;
   transform-style: preserve-3d;
   animation: fadeIn 1s forwards;
@@ -80,6 +75,8 @@ const Section = styled.div`
 `;
 
 function App() {
+  const [isHome, setIsHome] = useState(true);
+
   return (
     <>
       <GlobalStyle />
@@ -91,9 +88,7 @@ function App() {
           <Tag leftmargin="positive">&lt;body&gt;</Tag>
         </TopTag>
 
-        <Section>
-          <Home />
-        </Section>
+        <Section>{isHome && <Home />}</Section>
 
         <BottomTag>
           &lt;/body&gt;
