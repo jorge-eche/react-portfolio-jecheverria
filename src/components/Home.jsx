@@ -32,13 +32,25 @@ const Title1 = styled.h1`
   }
 
   span {
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: var(--light-yellow);
   }
 `;
 
 const Button = styled.button`
-  border: ;
+  opacity: 0.9;
+  color: var(--light-yellow);
+  background-color: var(--dark-blue);
+  padding: 10px 18px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  border: 1px solid var(--light-yellow);
+  &:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+    background-color: var(--light-yellow);
+  }
+  /* border: 5px solid var(--light-yellow); */
 `;
 
 const Home = () => {
