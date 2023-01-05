@@ -86,7 +86,7 @@ const BottomTag = styled(Tag)`
 `;
 
 const Header = styled.header`
-  margin-top: 100px;
+  margin-top: 115px;
   margin-left: 60px;
   text-align: center;
   opacity: 0;
