@@ -25,24 +25,6 @@ const SideBar = styled.div`
   min-height: 500px;
 `;
 
-const Nav = styled.nav`
-  text-align: center;
-  display: block;
-  position: absolute;
-  height: 210px;
-  top: 50%;
-  margin-top: -120px;
-  width: 100%;
-`;
-
-const UList = styled.ul`
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  list-style: none;
-  text-align: center;
-`;
-
 const JELogo = styled.img`
   display: block;
   margin: 8px auto;
@@ -51,8 +33,14 @@ const JELogo = styled.img`
   height: auto;
 `;
 
-const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-  color: var(--gun-powder);
+const Nav = styled.nav`
+  text-align: center;
+  display: block;
+  position: absolute;
+  height: 210px;
+  top: 50%;
+  margin-top: -120px;
+  width: 100%;
 `;
 
 const PageLink = styled.a`
@@ -93,6 +81,18 @@ const PageLink = styled.a`
   &:active {
     color: var(--light-yellow);
   }
+`;
+
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  color: var(--gun-powder);
+`;
+
+const UList = styled.ul`
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  list-style: none;
+  text-align: center;
 `;
 
 const ListItem = styled.li`

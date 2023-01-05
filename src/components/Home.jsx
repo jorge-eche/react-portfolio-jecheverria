@@ -39,6 +39,23 @@ const Title1 = styled.h1`
   }
 `;
 
+const TypedOut = styled.span`
+  overflow: hidden;
+  border-right: 0.15rem solid var(--light-yellow);
+  white-space: nowrap;
+  width: 0;
+  animation: typing 1s forwards;
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+`;
+
 const ContactButton = styled.button`
   margin-top: 20px;
   opacity: 0.9;
@@ -55,7 +72,6 @@ const ContactButton = styled.button`
     color: var(--dark-blue);
     background-color: var(--light-yellow);
   }
-  /* border: 5px solid var(--light-yellow); */
 `;
 
 const Home = () => {
@@ -64,7 +80,7 @@ const Home = () => {
       <Title1>
         Hello!
         <br /> My name is <span>Jorge Echeverria</span> <br />
-        I'm a <span>Frontend Developer</span>
+        I'm a <TypedOut>Frontend Developer</TypedOut>
       </Title1>
       <ContactButton>Contact Me</ContactButton>
     </>
