@@ -84,7 +84,8 @@ const PageLink = styled.a`
 `;
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-  color: var(--gun-powder);
+  color: ${(props) =>
+    props.active === "yes" ? "var(--light-yellow)" : "var(--gun-powder)"};
 `;
 
 const UList = styled.ul`
@@ -111,7 +112,7 @@ const ListItem = styled.li`
   }
 `;
 
-const Sidebar = () => {
+const Sidebar = ({ isHome }) => {
   return (
     <SideBar>
       <a href="">
@@ -120,7 +121,10 @@ const Sidebar = () => {
 
       <Nav>
         <PageLink href="" id="home-link">
-          <StyledFontAwesomeIcon icon={faHouse}></StyledFontAwesomeIcon>
+          <StyledFontAwesomeIcon
+            icon={faHouse}
+            active={isHome ? "yes" : ""}
+          ></StyledFontAwesomeIcon>
         </PageLink>
 
         <PageLink href="" id="about-link">

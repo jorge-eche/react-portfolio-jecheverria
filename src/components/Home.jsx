@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const Title1 = styled.h1`
   position: relative;
@@ -39,13 +41,7 @@ const Title1 = styled.h1`
   }
 `;
 
-// const ContainerTypedOut = styled.span`
-//   display: flex;
-// `;
-
 const TypedOut = styled.span`
-  /* border-right: 0.15rem solid var(--light-yellow); */
-
   &:before {
     content: "";
     vertical-align: top;
@@ -53,41 +49,40 @@ const TypedOut = styled.span`
     white-space: nowrap;
     display: inline-block;
     width: 0;
-    animation: typing 8s steps(18, end) 2.2s forwards infinite;
+    animation: typing 8s steps(18, end) 2.2s infinite;
     @keyframes typing {
       0% {
-        content: 'Lawyer and...';
+        content: "Lawyer and...";
         width: 0;
       }
       30% {
-        content: 'Lawyer and...';
+        content: "Lawyer and...";
         width: 280px;
       }
       35% {
-        content: 'Lawyer and...';
+        content: "Lawyer and...";
         width: 280px;
       }
       40% {
-        content:'Lawyer and...';
+        content: "Lawyer and...";
         width: 0;
       }
       41% {
-        content:'Frontend Developer';
+        content: "Frontend Developer";
       }
       70% {
-        content:'Frontend Developer';
-        width: 450px;
+        content: "Frontend Developer";
+        width: 430px;
       }
       95% {
-        content:'Frontend Developer';
-        width: 450px;
+        content: "Frontend Developer";
+        width: 430px;
       }
       100% {
-        content:'Frontend Developer';
+        content: "Frontend Developer";
         width: 0px;
       }
     }
-  }
   }
 
   &:after {
@@ -123,17 +118,27 @@ const ContactButton = styled.button`
   }
 `;
 
+const ArrowIcon = styled(FontAwesomeIcon)`
+  color: var(--white);
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
 const Home = () => {
   return (
     <>
       <Title1>
         Hello!
-        <br /> My name is <span>Jorge Echeverria</span> <br />
-        I'm a {/* <ContainerTypedOut> */}
-        <TypedOut></TypedOut>
-        {/* </ContainerTypedOut> */}
+        <br /> My name is <span>Jorge Echeverría</span> <br />
+        I'm a <TypedOut></TypedOut>
       </Title1>
       <ContactButton>Contact Me</ContactButton>
+      <ArrowIcon icon={faCircleChevronRight}></ArrowIcon>
     </>
   );
 };

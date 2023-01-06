@@ -5,7 +5,6 @@ import Layout from "./components/Layout";
 
 import "./App.css";
 import { createGlobalStyle } from "styled-components";
-import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -38,7 +37,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Sidebar />
+      <Sidebar isHome={isHome} />
       <Layout isHome={isHome} />
     </>
   );
