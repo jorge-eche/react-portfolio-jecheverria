@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const Title1 = styled.h1`
   position: relative;
@@ -138,7 +137,6 @@ const Home = () => {
         I'm a <TypedOut></TypedOut>
       </Title1>
       <ContactButton>Contact Me</ContactButton>
-      <ArrowIcon icon={faCircleChevronRight}></ArrowIcon>
     </>
   );
 };
