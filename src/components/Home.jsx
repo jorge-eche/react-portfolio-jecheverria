@@ -39,19 +39,68 @@ const Title1 = styled.h1`
   }
 `;
 
-const TypedOut = styled.span`
-  overflow: hidden;
-  border-right: 0.15rem solid var(--light-yellow);
-  white-space: nowrap;
-  width: 0;
-  animation: typing 1s forwards;
+// const ContainerTypedOut = styled.span`
+//   display: flex;
+// `;
 
-  @keyframes typing {
-    from {
-      width: 0;
+const TypedOut = styled.span`
+  /* border-right: 0.15rem solid var(--light-yellow); */
+
+  &:before {
+    content: "";
+    vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    width: 0;
+    animation: typing 8s steps(18, end) 2.2s forwards infinite;
+    @keyframes typing {
+      0% {
+        content: 'Lawyer and...';
+        width: 0;
+      }
+      30% {
+        content: 'Lawyer and...';
+        width: 280px;
+      }
+      35% {
+        content: 'Lawyer and...';
+        width: 280px;
+      }
+      40% {
+        content:'Lawyer and...';
+        width: 0;
+      }
+      41% {
+        content:'Frontend Developer';
+      }
+      70% {
+        content:'Frontend Developer';
+        width: 450px;
+      }
+      95% {
+        content:'Frontend Developer';
+        width: 450px;
+      }
+      100% {
+        content:'Frontend Developer';
+        width: 0px;
+      }
     }
-    to {
-      width: 100%;
+  }
+  }
+
+  &:after {
+    content: "|";
+    animation: blink 1.2s infinite;
+
+    @keyframes blink {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
     }
   }
 `;
@@ -80,7 +129,9 @@ const Home = () => {
       <Title1>
         Hello!
         <br /> My name is <span>Jorge Echeverria</span> <br />
-        I'm a <TypedOut>Frontend Developer</TypedOut>
+        I'm a {/* <ContainerTypedOut> */}
+        <TypedOut></TypedOut>
+        {/* </ContainerTypedOut> */}
       </Title1>
       <ContactButton>Contact Me</ContactButton>
     </>

@@ -60,7 +60,6 @@ const Header = styled.header`
   text-align: center;
   opacity: 0;
   animation: fadeIn 1s ease-in 1s forwards;
-  /* animation-delay: 1.3s; */
 
   @keyframes fadeIn {
     from {
