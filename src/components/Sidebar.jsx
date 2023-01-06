@@ -112,7 +112,7 @@ const ListItem = styled.li`
   }
 `;
 
-const Sidebar = ({ isHome }) => {
+const Sidebar = ({ isHome, isAbout }) => {
   return (
     <SideBar>
       <a href="">
@@ -128,7 +128,10 @@ const Sidebar = ({ isHome }) => {
         </PageLink>
 
         <PageLink href="" id="about-link">
-          <StyledFontAwesomeIcon icon={faUser}></StyledFontAwesomeIcon>
+          <StyledFontAwesomeIcon
+            icon={faUser}
+            active={isAbout ? "yes" : ""}
+          ></StyledFontAwesomeIcon>
         </PageLink>
 
         <PageLink href="" id="mywork-link">

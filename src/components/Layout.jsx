@@ -1,4 +1,5 @@
 import Home from "./Home";
+import About from "./About";
 import styled from "styled-components";
 
 const Page = styled.div`
@@ -71,7 +72,7 @@ const Header = styled.header`
   }
 `;
 
-const Layout = ({ isHome }) => {
+const Layout = ({ isHome, isAbout }) => {
   return (
     <Page>
       <TopTag>
@@ -80,7 +81,19 @@ const Layout = ({ isHome }) => {
         <Tag leftmargin="positive">&lt;body&gt;</Tag>
       </TopTag>
 
-      <Header>{isHome && <Home />}</Header>
+      {isHome && (
+        <Header>
+          {" "}
+          <Home />{" "}
+        </Header>
+      )}
+
+      {isAbout && (
+        <Header>
+          {" "}
+          <About />{" "}
+        </Header>
+      )}
 
       <BottomTag>
         &lt;/body&gt;

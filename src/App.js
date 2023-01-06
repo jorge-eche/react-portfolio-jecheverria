@@ -32,13 +32,14 @@ body {
 `;
 
 function App() {
-  const [isHome, setIsHome] = useState(true);
+  const [isHome, setIsHome] = useState(false);
+  const [isAbout, setIsAbout] = useState(true);
 
   return (
     <>
       <GlobalStyle />
-      <Sidebar isHome={isHome} />
-      <Layout isHome={isHome} />
+      <Sidebar isHome={isHome} isAbout={isAbout} />
+      <Layout isHome={isHome} isAbout={isAbout} />
     </>
   );
 }
