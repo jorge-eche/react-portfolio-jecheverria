@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import JorgePic from "../images/je2.jpg";
+import JorgePic from "../images/jee1.jpg";
 
 const Title1 = styled.h1`
   font-size: 3.3rem;
-  line-height: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
   margin-left: -40px;
   color: var(--light-yellow);
+  margin-bottom: 40px;
 
   &:before {
     content: "<h1>";
@@ -32,43 +32,92 @@ const Title1 = styled.h1`
   }
 `;
 
-const Paragraph = styled.p`
-  margin: 40px 100px;
+const ContainerFlex = styled.div`
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
 `;
 
-const Resume = styled.button``;
+const ContainerP = styled.div`
+  flex-basis: 60%;
+`;
+
+const Paragraph = styled.p`
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  line-height: 1.1rem;
+  margin-bottom: 20px;
+  text-align: initial;
+
+  /* animation: pulse 1s; */
+`;
+
+const Resume = styled.button`
+  margin-top: 20px;
+  opacity: 0.9;
+  color: var(--light-yellow);
+  background-color: var(--dark-blue);
+  padding: 10px 18px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  border: 1px solid var(--light-yellow);
+  &:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+    background-color: var(--light-yellow);
+  }
+`;
+
+const ContainerPhoto = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Photo = styled.img`
+  border-radius: 200px;
+`;
 
 const About = () => {
   return (
     <>
       {" "}
       <Title1>About Me</Title1>
-      <div>
+      <ContainerFlex>
         {" "}
-        <div>
+        <ContainerP>
           {" "}
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-            blanditiis quam! Tempora officia iure ullam corrupti numquam quas
-            mollitia voluptate odio perferendis molestias ipsum cum, dolores
-            laudantium. Repellendus, at ut!
+            Hi there! My name is Jorge and I am an ambitious frontend developer
+            looking for a role on an established IT company that gives me the
+            opportunity to work with the latest technologies on challenging and
+            diverse project
           </Paragraph>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-            blanditiis quam! Tempora officia iure ullam corrupti numquam quas
-            mollitia voluptate odio perferendis molestias ipsum cum, dolores
-            laudantium. Repellendus, at ut!
+            Before transitioning into tech, I spent several years practicing law
+            and learned the importance of attention to detail and the ability to
+            think critically under pressure. On my free time, maintaining
+            physical fitness through weight lifting at the gym not only helps me
+            to stay healthy and energized, but it also improves my mental
+            clarity and focus. These skills have proven to be invaluable in my
+            current career as a developer.
           </Paragraph>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-            blanditiis quam! Tempora officia iure ullam corrupti numquam quas
-            mollitia voluptate odio perferendis molestias ipsum cum, dolores
-            laudantium. Repellendus, at ut!
+            If I had to define myself in just a few words I would say I am a
+            disciplined, curious and hard-working individual, avid reader, gym
+            fanatic and above all web development obssesed!!!
           </Paragraph>
-        </div>
-        <img src={JorgePic} alt="Jorge Picture" />
-      </div>
-      <button>Resume</button>
+          <a href="">
+            {" "}
+            <Resume>My Resume</Resume>
+          </a>
+        </ContainerP>
+        <ContainerPhoto>
+          {" "}
+          <Photo src={JorgePic} alt="My Picture" />
+        </ContainerPhoto>
+      </ContainerFlex>
     </>
   );
 };
