@@ -72,7 +72,7 @@ const Header = styled.header`
   }
 `;
 
-const Layout = ({ isHome, isAbout }) => {
+const Layout = ({ isActive }) => {
   return (
     <Page>
       <TopTag>
@@ -81,14 +81,14 @@ const Layout = ({ isHome, isAbout }) => {
         <Tag leftmargin="positive">&lt;body&gt;</Tag>
       </TopTag>
 
-      {isHome && (
+      {isActive.home && (
         <Header>
           {" "}
           <Home />{" "}
         </Header>
       )}
 
-      {isAbout && (
+      {isActive.about && (
         <Header>
           {" "}
           <About />{" "}

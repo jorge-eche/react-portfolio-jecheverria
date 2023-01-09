@@ -57,6 +57,7 @@ const PageLink = styled.a`
 
   &:hover {
     color: var(--light-yellow);
+    cursor: pointer;
     svg {
       opacity: 0;
     }
@@ -112,7 +113,24 @@ const ListItem = styled.li`
   }
 `;
 
-const Sidebar = ({ isHome, isAbout }) => {
+const Sidebar = ({ isActive, setIsActive }) => {
+  const activateHome = () => {
+    setIsActive({
+      home: true,
+      about: false,
+      porfolio: false,
+      contact: false,
+    });
+  };
+
+  const activateAbout = () => {
+    setIsActive({
+      home: false,
+      about: true,
+      porfolio: false,
+      contact: false,
+    });
+  };
   return (
     <SideBar>
       <a href="">
@@ -120,17 +138,17 @@ const Sidebar = ({ isHome, isAbout }) => {
       </a>
 
       <Nav>
-        <PageLink href="" id="home-link">
+        <PageLink id="home-link" onClick={activateHome}>
           <StyledFontAwesomeIcon
             icon={faHouse}
-            active={isHome ? "yes" : ""}
+            active={isActive.home ? "yes" : ""}
           ></StyledFontAwesomeIcon>
         </PageLink>
 
-        <PageLink href="" id="about-link">
+        <PageLink id="about-link" onClick={activateAbout}>
           <StyledFontAwesomeIcon
             icon={faUser}
-            active={isAbout ? "yes" : ""}
+            active={isActive.about ? "yes" : ""}
           ></StyledFontAwesomeIcon>
         </PageLink>
 

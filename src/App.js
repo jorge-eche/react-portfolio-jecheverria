@@ -33,14 +33,18 @@ body {
 `;
 
 function App() {
-  const [isHome, setIsHome] = useState(true);
-  const [isAbout, setIsAbout] = useState(false);
+  const [isActive, setIsActive] = useState({
+    home: true,
+    about: false,
+    porfolio: false,
+    contact: false,
+  });
 
   return (
     <>
       <GlobalStyle />
-      <Sidebar isHome={isHome} isAbout={isAbout} />
-      <Layout isHome={isHome} isAbout={isAbout} />
+      <Sidebar isActive={isActive} setIsActive={setIsActive} />
+      <Layout isActive={isActive} />
     </>
   );
 }
