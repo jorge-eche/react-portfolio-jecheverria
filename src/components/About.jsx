@@ -54,6 +54,16 @@ const Paragraph = styled.p`
   /* animation: pulse 1s; */
 `;
 
+const ContainerPhoto = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+`;
+
+const Photo = styled.img`
+  border-radius: 50%;
+`;
+
 const Resume = styled.button`
   margin-top: 20px;
   opacity: 0.9;
@@ -72,15 +82,6 @@ const Resume = styled.button`
   }
 `;
 
-const ContainerPhoto = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const Photo = styled.img`
-  border-radius: 50%;
-`;
-
 const About = () => {
   return (
     <>
@@ -94,7 +95,7 @@ const About = () => {
             Hi there! My name is Jorge and I am an ambitious frontend developer
             looking for a role on an established IT company that gives me the
             opportunity to work with the latest technologies on challenging and
-            diverse project
+            diverse project .
           </Paragraph>
           <Paragraph>
             Before transitioning into tech, I spent several years practicing law
@@ -103,12 +104,12 @@ const About = () => {
             physical fitness through weight lifting at the gym not only helps me
             to stay healthy and energized, but it also improves my mental
             clarity and focus. These skills have proven to be invaluable in my
-            current career as a developer.
+            current career as a developer .
           </Paragraph>
           <Paragraph>
             If I had to define myself in just a few words I would say I am a
             disciplined, curious and hard-working individual, avid reader, gym
-            fanatic and above all web development obssesed!!!
+            fanatic and above all web development obssesed !!!
           </Paragraph>
         </ContainerP>
         <div>

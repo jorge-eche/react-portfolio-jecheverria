@@ -33,8 +33,8 @@ body {
 `;
 
 function App() {
-  const [isHome, setIsHome] = useState(false);
-  const [isAbout, setIsAbout] = useState(true);
+  const [isHome, setIsHome] = useState(true);
+  const [isAbout, setIsAbout] = useState(false);
 
   return (
     <>

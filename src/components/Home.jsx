@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Title1 = styled.h1`
   position: relative;
-  font-size: 3.3rem;
-  line-height: 5rem;
+  font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
   margin-left: -40px;
@@ -56,11 +55,11 @@ const TypedOut = styled.span`
       }
       30% {
         content: "Lawyer and...";
-        width: 280px;
+        width: 420px;
       }
       35% {
         content: "Lawyer and...";
-        width: 280px;
+        width: 420px;
       }
       40% {
         content: "Lawyer and...";
@@ -71,11 +70,11 @@ const TypedOut = styled.span`
       }
       70% {
         content: "Frontend Developer";
-        width: 430px;
+        width: 650px;
       }
       95% {
         content: "Frontend Developer";
-        width: 430px;
+        width: 650px;
       }
       100% {
         content: "Frontend Developer";
@@ -100,11 +99,11 @@ const TypedOut = styled.span`
 `;
 
 const ContactButton = styled.button`
-  margin-top: 20px;
+  margin-top: 60px;
   opacity: 0.9;
   color: var(--light-yellow);
   background-color: var(--dark-blue);
-  padding: 10px 18px;
+  padding: 15px 25px;
   text-transform: uppercase;
   font-family: sans-serif;
   letter-spacing: 0.5rem;
@@ -114,17 +113,6 @@ const ContactButton = styled.button`
     cursor: pointer;
     color: var(--dark-blue);
     background-color: var(--light-yellow);
-  }
-`;
-
-const ArrowIcon = styled(FontAwesomeIcon)`
-  color: var(--white);
-  font-size: 40px;
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  &:hover {
-    cursor: pointer;
   }
 `;
 
