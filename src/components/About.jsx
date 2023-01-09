@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import JorgePic from "../images/jee1.jpg";
+import JorgePic from "../img/myphoto.jpg";
 
 const Title1 = styled.h1`
-  font-size: 3.3rem;
+  font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
   margin-left: -40px;
@@ -43,11 +43,13 @@ const ContainerP = styled.div`
 `;
 
 const Paragraph = styled.p`
-  font-size: 0.8rem;
+  text-align: justify;
+  text-justify: inter-word;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
   font-family: sans-serif;
-  line-height: 1.1rem;
+  line-height: 2rem;
   margin-bottom: 20px;
-  text-align: initial;
 
   /* animation: pulse 1s; */
 `;
@@ -76,14 +78,14 @@ const ContainerPhoto = styled.div`
 `;
 
 const Photo = styled.img`
-  border-radius: 200px;
+  border-radius: 50%;
 `;
 
 const About = () => {
   return (
     <>
       {" "}
-      <Title1>About Me</Title1>
+      <Title1>About me</Title1>
       <ContainerFlex>
         {" "}
         <ContainerP>
@@ -108,15 +110,18 @@ const About = () => {
             disciplined, curious and hard-working individual, avid reader, gym
             fanatic and above all web development obssesed!!!
           </Paragraph>
+        </ContainerP>
+        <div>
+          {" "}
+          <ContainerPhoto>
+            {" "}
+            <Photo src={JorgePic} alt="My Picture" />
+          </ContainerPhoto>
           <a href="">
             {" "}
             <Resume>My Resume</Resume>
           </a>
-        </ContainerP>
-        <ContainerPhoto>
-          {" "}
-          <Photo src={JorgePic} alt="My Picture" />
-        </ContainerPhoto>
+        </div>
       </ContainerFlex>
     </>
   );
