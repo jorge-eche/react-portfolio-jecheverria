@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Title1 = styled.h1`
+const Title = styled.h1`
   position: relative;
   font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
@@ -128,11 +128,11 @@ const Home = ({ setIsActive }) => {
 
   return (
     <>
-      <Title1>
+      <Title>
         Hello!
         <br /> My name is <span>Jorge Echeverría</span> <br />
         I'm a <TypedOut></TypedOut>
-      </Title1>
+      </Title>
       <ContactButton onClick={handleClick}>Contact Me</ContactButton>
     </>
   );

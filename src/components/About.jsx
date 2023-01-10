@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import JorgePic from "../img/myphoto.jpg";
 
-const Title1 = styled.h1`
+const Title = styled.h1`
   font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
@@ -86,7 +86,7 @@ const About = () => {
   return (
     <>
       {" "}
-      <Title1>About me</Title1>
+      <Title>About me</Title>
       <ContainerFlex>
         {" "}
         <ContainerP>
@@ -98,7 +98,7 @@ const About = () => {
             diverse project .
           </Paragraph>
           <Paragraph>
-            Before transitioning into tech, I spent several years practicing law
+            Before transitioning into tech, I spent several years studying law
             and learned the importance of attention to detail and the ability to
             think critically under pressure. On my free time, maintaining
             physical fitness through weight lifting at the gym not only helps me

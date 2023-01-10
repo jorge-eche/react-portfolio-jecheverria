@@ -3,6 +3,8 @@
   src: url("./assets/CoolveticaRg-Regular.woff2") format("woff2");
 }
 
+/* Adds Legend to Sidebar Icons on hover */
+
 #home-link::after {
   content: "HOME";
 }

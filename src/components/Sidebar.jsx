@@ -4,6 +4,8 @@ import {
   faHouse,
   faUser,
   faEnvelope,
+  faEnvelopeOpen,
+  faFolder,
   faFolderOpen,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -171,14 +173,14 @@ const Sidebar = ({ isActive, setIsActive }) => {
 
         <PageLink id="mywork-link" onClick={activatePortfolio}>
           <StyledFontAwesomeIcon
-            icon={faFolderOpen}
+            icon={isActive.portfolio ? faFolderOpen : faFolder}
             active={isActive.portfolio ? "yes" : ""}
           ></StyledFontAwesomeIcon>
         </PageLink>
 
         <PageLink id="contact-link" onClick={activateContact}>
           <StyledFontAwesomeIcon
-            icon={faEnvelope}
+            icon={isActive.contact ? faEnvelopeOpen : faEnvelope}
             active={isActive.contact ? "yes" : ""}
           ></StyledFontAwesomeIcon>
         </PageLink>
