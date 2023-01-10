@@ -118,7 +118,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
     setIsActive({
       home: true,
       about: false,
-      porfolio: false,
+      portfolio: false,
       contact: false,
     });
   };
@@ -127,8 +127,25 @@ const Sidebar = ({ isActive, setIsActive }) => {
     setIsActive({
       home: false,
       about: true,
-      porfolio: false,
+      portfolio: false,
       contact: false,
+    });
+  };
+
+  const activatePortfolio = () => {
+    setIsActive({
+      home: false,
+      about: false,
+      portfolio: true,
+      contact: false,
+    });
+  };
+  const activateContact = () => {
+    setIsActive({
+      home: false,
+      about: false,
+      portfolio: false,
+      contact: true,
     });
   };
   return (
@@ -152,12 +169,18 @@ const Sidebar = ({ isActive, setIsActive }) => {
           ></StyledFontAwesomeIcon>
         </PageLink>
 
-        <PageLink href="" id="mywork-link">
-          <StyledFontAwesomeIcon icon={faFolderOpen}></StyledFontAwesomeIcon>
+        <PageLink id="mywork-link" onClick={activatePortfolio}>
+          <StyledFontAwesomeIcon
+            icon={faFolderOpen}
+            active={isActive.portfolio ? "yes" : ""}
+          ></StyledFontAwesomeIcon>
         </PageLink>
 
-        <PageLink href="" id="contact-link">
-          <StyledFontAwesomeIcon icon={faEnvelope}></StyledFontAwesomeIcon>
+        <PageLink id="contact-link" onClick={activateContact}>
+          <StyledFontAwesomeIcon
+            icon={faEnvelope}
+            active={isActive.contact ? "yes" : ""}
+          ></StyledFontAwesomeIcon>
         </PageLink>
       </Nav>
 

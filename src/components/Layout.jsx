@@ -1,5 +1,6 @@
 import Home from "./Home";
 import About from "./About";
+import Portfolio from "./Portfolio";
 import styled from "styled-components";
 
 const Page = styled.div`
@@ -72,7 +73,7 @@ const Header = styled.header`
   }
 `;
 
-const Layout = ({ isActive }) => {
+const Layout = ({ isActive, setIsActive }) => {
   return (
     <Page>
       <TopTag>
@@ -84,7 +85,7 @@ const Layout = ({ isActive }) => {
       {isActive.home && (
         <Header>
           {" "}
-          <Home />{" "}
+          <Home setIsActive={setIsActive} />{" "}
         </Header>
       )}
 
@@ -92,6 +93,13 @@ const Layout = ({ isActive }) => {
         <Header>
           {" "}
           <About />{" "}
+        </Header>
+      )}
+
+      {isActive.portfolio && (
+        <Header>
+          {" "}
+          <Portfolio />{" "}
         </Header>
       )}
 

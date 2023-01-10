@@ -36,7 +36,7 @@ function App() {
   const [isActive, setIsActive] = useState({
     home: true,
     about: false,
-    porfolio: false,
+    portfolio: false,
     contact: false,
   });
 
@@ -44,7 +44,7 @@ function App() {
     <>
       <GlobalStyle />
       <Sidebar isActive={isActive} setIsActive={setIsActive} />
-      <Layout isActive={isActive} />
+      <Layout isActive={isActive} setIsActive={setIsActive} />
     </>
   );
 }

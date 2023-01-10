@@ -116,7 +116,16 @@ const ContactButton = styled.button`
   }
 `;
 
-const Home = () => {
+const Home = ({ setIsActive }) => {
+  const handleClick = () => {
+    setIsActive({
+      home: false,
+      about: false,
+      porfolio: false,
+      contact: true,
+    });
+  };
+
   return (
     <>
       <Title1>
@@ -124,7 +133,7 @@ const Home = () => {
         <br /> My name is <span>Jorge Echeverría</span> <br />
         I'm a <TypedOut></TypedOut>
       </Title1>
-      <ContactButton>Contact Me</ContactButton>
+      <ContactButton onClick={handleClick}>Contact Me</ContactButton>
     </>
   );
 };
