@@ -50,6 +50,9 @@ const Slider = styled.div`
 const ArrowIcon = styled(FontAwesomeIcon)`
   font-size: 20px;
   height: 51px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const ProjectContainer = styled.div``;
@@ -61,15 +64,41 @@ const ProjectImage = styled.img`
 
 const ProjectTitle = styled.h1`
   color: var(--light-yellow);
+  margin-bottom: 15px;
 `;
 
-const Description = styled.h2``;
+const Description = styled.h2`
+  font-weight: 400;
+  margin-bottom: 15px;
+`;
 
 const Techs = styled.h3`
-  color: var(--light-yellow);
+  opacity: 0.8;
 `;
 
-const Button = styled.button``;
+const ButtonContainer = styled.div`
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+`;
+
+const Button = styled.button`
+  width: 180px;
+  opacity: 0.9;
+  color: var(--light-yellow);
+  background-color: var(--dark-blue);
+  padding: 10px 18px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  border: 1px solid var(--light-yellow);
+  &:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+    background-color: var(--light-yellow);
+  }
+`;
 
 const Portfolio = () => {
   useEffect(() => {
@@ -96,9 +125,9 @@ const Portfolio = () => {
               to make pledges
             </Description>
             <Techs>Developed with HTML, CSS, Javascript and React</Techs>
-            <div>
+            <ButtonContainer>
               <Button>See Live</Button> <Button>Source Code</Button>
-            </div>
+            </ButtonContainer>
           </ProjectContainer>
           <ArrowIcon icon={faCircleArrowRight} />
         </Slider>
