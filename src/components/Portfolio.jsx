@@ -58,6 +58,7 @@ const ProjectContainer = styled.div``;
 
 const ProjectImage = styled.img`
   width: 400px;
+  height: 200px;
   margin-bottom: 15px;
 `;
 
@@ -116,8 +117,8 @@ const Portfolio = () => {
       <Slider>
         {" "}
         <ArrowIcon icon={faCircleArrowLeft} />
-        {Projects.map((project) => {
-          return (
+        {Projects.map((project, index) =>
+          index === current ? (
             <ProjectContainer
               data-aos="flip-right"
               data-aos-duration="2000"
@@ -136,8 +137,8 @@ const Portfolio = () => {
                 </Link>
               </ButtonContainer>
             </ProjectContainer>
-          );
-        })}
+          ) : null
+        )}
         <ArrowIcon icon={faCircleArrowRight} />
       </Slider>
     </>
