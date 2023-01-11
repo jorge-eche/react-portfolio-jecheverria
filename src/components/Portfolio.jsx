@@ -7,8 +7,7 @@ import {
   faCircleArrowLeft,
   faCircleArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import PortfolioData from "../data/portfolio.json";
-import SliderImg from "../img/crypto-screenshot.png";
+import Projects from "../data/portfolio.json";
 
 const Title = styled.h1`
   font-size: 5rem;
@@ -43,7 +42,7 @@ const Title = styled.h1`
 
 const Slider = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 `;
 
@@ -82,7 +81,8 @@ const ButtonContainer = styled.div`
   justify-content: space-around;
 `;
 
-const Button = styled.button`
+const Link = styled.a`
+  text-decoration: none;
   width: 180px;
   opacity: 0.9;
   color: var(--light-yellow);
@@ -113,25 +113,33 @@ const Portfolio = () => {
     <>
       {" "}
       <Title>My Portfolio</Title>
-      <div>
-        <Slider>
-          {" "}
-          <ArrowIcon icon={faCircleArrowLeft} />
-          <ProjectContainer data-aos="flip-right" data-aos-duration="2000">
-            <ProjectImage src={SliderImg} alt="Project image" />
-            <ProjectTitle>Crowdfunding Product Page</ProjectTitle>
-            <Description>
-              React app that emulates a crowdfunding website and allows visitors
-              to make pledges
-            </Description>
-            <Techs>Developed with HTML, CSS, Javascript and React</Techs>
-            <ButtonContainer>
-              <Button>See Live</Button> <Button>Source Code</Button>
-            </ButtonContainer>
-          </ProjectContainer>
-          <ArrowIcon icon={faCircleArrowRight} />
-        </Slider>
-      </div>
+      <Slider>
+        {" "}
+        <ArrowIcon icon={faCircleArrowLeft} />
+        {Projects.map((project) => {
+          return (
+            <ProjectContainer
+              data-aos="flip-right"
+              data-aos-duration="2000"
+              key={project.id}
+            >
+              <ProjectImage src={project.image} alt="Project image" />
+              <ProjectTitle>{project.title}</ProjectTitle>
+              <Description>{project.description}</Description>
+              <Techs>{project.techs}</Techs>
+              <ButtonContainer>
+                <Link href={project.url} target="_blank">
+                  See Live
+                </Link>{" "}
+                <Link href={project.code} target="_blank">
+                  Source Code
+                </Link>
+              </ButtonContainer>
+            </ProjectContainer>
+          );
+        })}
+        <ArrowIcon icon={faCircleArrowRight} />
+      </Slider>
     </>
   );
 };
