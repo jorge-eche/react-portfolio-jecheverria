@@ -95,12 +95,12 @@ const About = () => {
             Hi there! My name is Jorge and I am an ambitious frontend developer
             looking for a role on an established IT company that gives me the
             opportunity to work with the latest technologies on challenging and
-            diverse project .
+            diverse projects .
           </Paragraph>
           <Paragraph>
             Before transitioning into tech, I spent several years studying law
             and learned the importance of attention to detail and the ability to
-            think critically under pressure. On my free time, maintaining
+            think critically under pressure. On the other hand, maintaining
             physical fitness through weight lifting at the gym not only helps me
             to stay healthy and energized, but it also improves my mental
             clarity and focus. These skills have proven to be invaluable in my

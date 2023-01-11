@@ -161,28 +161,28 @@ const Sidebar = ({ isActive, setIsActive }) => {
           <StyledFontAwesomeIcon
             icon={faHouse}
             active={isActive.home ? "yes" : ""}
-          ></StyledFontAwesomeIcon>
+          />
         </PageLink>
 
         <PageLink id="about-link" onClick={activateAbout}>
           <StyledFontAwesomeIcon
             icon={faUser}
             active={isActive.about ? "yes" : ""}
-          ></StyledFontAwesomeIcon>
+          />
         </PageLink>
 
         <PageLink id="mywork-link" onClick={activatePortfolio}>
           <StyledFontAwesomeIcon
             icon={isActive.portfolio ? faFolderOpen : faFolder}
             active={isActive.portfolio ? "yes" : ""}
-          ></StyledFontAwesomeIcon>
+          />
         </PageLink>
 
         <PageLink id="contact-link" onClick={activateContact}>
           <StyledFontAwesomeIcon
             icon={isActive.contact ? faEnvelopeOpen : faEnvelope}
             active={isActive.contact ? "yes" : ""}
-          ></StyledFontAwesomeIcon>
+          />
         </PageLink>
       </Nav>
 
@@ -192,13 +192,13 @@ const Sidebar = ({ isActive, setIsActive }) => {
             href="https://www.linkedin.com/in/jorge-enrique-echeverr%C3%ADa-402984232/"
             target="_blank"
           >
-            <StyledFontAwesomeIcon icon={faLinkedin}></StyledFontAwesomeIcon>
+            <StyledFontAwesomeIcon icon={faLinkedin} />
           </a>
         </ListItem>
 
         <ListItem>
           <a href="https://github.com/jorge-eche" target="_blank">
-            <StyledFontAwesomeIcon icon={faGithub}></StyledFontAwesomeIcon>
+            <StyledFontAwesomeIcon icon={faGithub} />
           </a>
         </ListItem>
 
@@ -207,13 +207,13 @@ const Sidebar = ({ isActive, setIsActive }) => {
             href="https://wa.me/610468864448?text=Hi%20Jorge%20,%20I'm%20interested%20in%20your%20portfolio"
             target="_blank"
           >
-            <StyledFontAwesomeIcon icon={faWhatsapp}></StyledFontAwesomeIcon>
+            <StyledFontAwesomeIcon icon={faWhatsapp} />
           </a>
         </ListItem>
 
         <ListItem>
           <a href="https://twitter.com/CokoEche" target="_blank">
-            <StyledFontAwesomeIcon icon={faTwitter}></StyledFontAwesomeIcon>
+            <StyledFontAwesomeIcon icon={faTwitter} />
           </a>
         </ListItem>
       </UList>

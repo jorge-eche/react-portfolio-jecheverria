@@ -57,11 +57,11 @@ const BottomTag = styled(Tag)`
 `;
 
 const Header = styled.header`
-  margin-top: 130px;
+  margin-top: 100px;
   margin-left: 60px;
   text-align: center;
   opacity: 0;
-  animation: fadeIn 1s ease-in 1s forwards;
+  animation: fadeIn 1s ease-in 0.5s forwards;
 
   @keyframes fadeIn {
     from {

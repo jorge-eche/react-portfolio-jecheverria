@@ -1,0 +1,41 @@
+{
+  "portfolio": [
+    {
+      "id": "1",
+      "image": "../img/crowdfunding-screenshot.png",
+      "title": "Crowdfunding Product Page",
+      "description": "React app that emulates a crowdfunding website and allows visitors to make pledges",
+      "techs": "Developed with HTML, CSS, Javascript and React",
+      "url": "https://crowdfunding-project-page.netlify.app",
+      "code": "https://github.com/jorge-eche/crowdfunding-product-page"
+    },
+    {
+      "id": "2",
+      "image": "../img/portfolio-screenshot.png",
+      "title": "Portfolio Website",
+      "description": "My personal portfolio created to showcase my work and side projects",
+      "techs": "Developed with HTML, CSS, Styled Components, Javascript and React",
+      "url": "https://jorgeecheverria.netlify.app",
+      "code": "https://github.com/jorge-eche/react-portfolio-jecheverria"
+    },
+    {
+      "id": "3",
+      "image": "../img/crypto-screenshot.png",
+      "title": "Cyptocurrency Comparison Website",
+      "description": "Site that compares 5 currencies with the 10 most important cryptos with the help of an API",
+      "techs": "Developed with HTML, CSS, Javascript, React (custom Hooks), APIs",
+      "url": "cryptos-tracker-react.netlify.app",
+      "code": "https://github.com/jorge-eche/crypto-react"
+    },
+
+    {
+      "id": "4",
+      "image": "../img/expense-tracker-screenshot.png",
+      "title": "Expense Tracker App",
+      "description": "Application that helps users track their spending by allowing them to create a budget and input/categorize their expenses.",
+      "techs": "Developed with HTML, CSS, Javascript and React",
+      "url": "expenses-tracker-jee.netlify.app",
+      "code": "https://github.com/jorge-eche/expense-tracker"
+    }
+  ]
+}
