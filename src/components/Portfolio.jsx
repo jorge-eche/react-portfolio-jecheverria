@@ -72,6 +72,14 @@ const ProjectImage = styled.img`
 const ProjectTitle = styled.h1`
   color: var(--light-yellow);
   margin-bottom: 15px;
+  &:after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: var(--light-yellow);
+    margin: 10px auto 0 auto;
+  }
 `;
 
 const Description = styled.h2`
