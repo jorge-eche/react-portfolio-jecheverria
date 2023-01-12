@@ -68,6 +68,7 @@ const ProjectImage = styled.img`
   height: 200px;
   margin-bottom: 30px;
   box-shadow: 1em 1em 2em #000;
+  border-radius: 10px;
 `;
 
 const ProjectTitle = styled.h1`
