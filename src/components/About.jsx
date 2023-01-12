@@ -50,8 +50,6 @@ const Paragraph = styled.p`
   font-family: sans-serif;
   line-height: 2rem;
   margin-bottom: 20px;
-
-  /* animation: pulse 1s; */
 `;
 
 const ContainerPhoto = styled.div`
@@ -75,6 +73,7 @@ const Resume = styled.button`
   letter-spacing: 0.5rem;
   text-align: center;
   border: 1px solid var(--light-yellow);
+  border-radius: 4px;
   &:hover {
     cursor: pointer;
     color: var(--dark-blue);

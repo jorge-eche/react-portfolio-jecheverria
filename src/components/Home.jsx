@@ -110,6 +110,7 @@ const ContactButton = styled.button`
   letter-spacing: 0.5rem;
   text-align: center;
   border: 1px solid var(--light-yellow);
+  border-radius: 4px;
   &:hover {
     cursor: pointer;
     color: var(--dark-blue);

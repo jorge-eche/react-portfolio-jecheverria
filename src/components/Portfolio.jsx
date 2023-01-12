@@ -113,6 +113,8 @@ const Link = styled.a`
   font-family: sans-serif;
   letter-spacing: 0.5rem;
   border: 1px solid var(--light-yellow);
+  border-radius: ${(props) =>
+    props.variant === "right" ? "0 4px 4px 0;" : "4px 0 0 4px"};
   &:hover {
     cursor: pointer;
     color: var(--dark-blue);
@@ -128,7 +130,7 @@ const Portfolio = () => {
   }, []);
 
   const [current, setCurrent] = useState(0);
-  //State for changing the flip side animation on ProjectImage
+  //State for changing the flip side animation on ProjectImage, depending on ArrowIcon clicked
   const [isRight, setIsRight] = useState(true);
 
   const slideLeft = () => {
@@ -159,7 +161,7 @@ const Portfolio = () => {
         {Projects.map((project, index) =>
           index === current ? (
             <ProjectContainer
-              data-aos={isRight ? "flip-right" : "flip-left"}
+              data-aos={isRight ? "flip-left" : "flip-right"}
               data-aos-duration="2000"
               key={project.id}
             >
@@ -171,7 +173,7 @@ const Portfolio = () => {
                 <Link href={project.url} target="_blank">
                   See Live
                 </Link>{" "}
-                <Link href={project.code} target="_blank">
+                <Link href={project.code} target="_blank" variant="right">
                   Source Code
                 </Link>
               </ButtonContainer>
