@@ -128,8 +128,11 @@ const Portfolio = () => {
   }, []);
 
   const [current, setCurrent] = useState(0);
+  //State for changing the flip side animation on ProjectImage
+  const [isRight, setIsRight] = useState(true);
 
   const slideLeft = () => {
+    setIsRight(false);
     if (current - 1 === -1) {
       setCurrent(Projects.length - 1);
     } else {
@@ -138,6 +141,7 @@ const Portfolio = () => {
   };
 
   const slideRight = () => {
+    setIsRight(true);
     if (current + 1 === Projects.length) {
       setCurrent(0);
     } else {
@@ -155,7 +159,7 @@ const Portfolio = () => {
         {Projects.map((project, index) =>
           index === current ? (
             <ProjectContainer
-              data-aos="flip-right"
+              data-aos={isRight ? "flip-right" : "flip-left"}
               data-aos-duration="2000"
               key={project.id}
             >
