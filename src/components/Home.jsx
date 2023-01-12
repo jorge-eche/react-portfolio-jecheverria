@@ -18,20 +18,22 @@ const Title = styled.h1`
     left: -30px;
   }
 
-  &:after {
-    content: "</h1>";
-    font-family: "La Belle Aurore", cursive;
-    font-size: 1.125rem;
-    color: var(--light-yellow);
-    opacity: 0.6;
-    position: relative;
-    top: 20px;
-    left: 30px;
-  }
-
   span {
     font-size: 1.2em;
     color: var(--light-yellow);
+  }
+
+  span:nth-child(2) {
+    &:after {
+      content: "</h1>";
+      font-family: "La Belle Aurore", cursive;
+      font-size: 1.125rem;
+      color: var(--light-yellow);
+      opacity: 0.6;
+      position: relative;
+      top: 150px;
+      left: -90px;
+    }
   }
   span:nth-child(4) {
     font-size: 1em;
