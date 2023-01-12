@@ -83,16 +83,18 @@ const ButtonContainer = styled.div`
 `;
 
 const Link = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   width: 180px;
   opacity: 0.9;
   color: var(--light-yellow);
   background-color: var(--dark-blue);
-  padding: 10px 18px;
+  padding: 8px 0;
   text-transform: uppercase;
   font-family: sans-serif;
   letter-spacing: 0.5rem;
-  text-align: center;
   border: 1px solid var(--light-yellow);
   &:hover {
     cursor: pointer;
@@ -110,13 +112,29 @@ const Portfolio = () => {
 
   const [current, setCurrent] = useState(0);
 
+  const slideLeft = () => {
+    if (current - 1 === -1) {
+      setCurrent(Projects.length - 1);
+    } else {
+      setCurrent(current - 1);
+    }
+  };
+
+  const slideRight = () => {
+    if (current + 1 === Projects.length) {
+      setCurrent(0);
+    } else {
+      setCurrent(current + 1);
+    }
+  };
+
   return (
     <>
       {" "}
       <Title>My Portfolio</Title>
       <Slider>
         {" "}
-        <ArrowIcon icon={faCircleArrowLeft} />
+        <ArrowIcon icon={faCircleArrowLeft} onClick={slideLeft} />
         {Projects.map((project, index) =>
           index === current ? (
             <ProjectContainer
@@ -139,7 +157,7 @@ const Portfolio = () => {
             </ProjectContainer>
           ) : null
         )}
-        <ArrowIcon icon={faCircleArrowRight} />
+        <ArrowIcon icon={faCircleArrowRight} onClick={slideRight} />
       </Slider>
     </>
   );
