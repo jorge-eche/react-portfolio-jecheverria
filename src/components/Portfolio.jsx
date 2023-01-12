@@ -44,6 +44,7 @@ const Slider = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 1500px;
 `;
 
 const ArrowIcon = styled(FontAwesomeIcon)`
@@ -54,7 +55,13 @@ const ArrowIcon = styled(FontAwesomeIcon)`
   }
 `;
 
-const ProjectContainer = styled.div``;
+const ProjectContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 900px;
+  height: 400px;
+`;
 
 const ProjectImage = styled.img`
   width: 400px;
