@@ -15,7 +15,7 @@ const Title = styled.h1`
   font-weight: 400;
   margin-left: -40px;
   color: var(--light-yellow);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   &:before {
     content: "<h1>";
@@ -66,7 +66,8 @@ const ProjectContainer = styled.div`
 const ProjectImage = styled.img`
   width: 400px;
   height: 200px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  box-shadow: 1em 1em 2em #000;
 `;
 
 const ProjectTitle = styled.h1`
