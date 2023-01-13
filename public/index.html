@@ -9,6 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <title>Jorge Echeverría</title>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -31,8 +32,15 @@
       href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Roboto&display=swap"
       rel="stylesheet"
     />
-    
-    <title>Jorge Echeverría</title>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('c_AW7MwZbdHhXZPgq');
+        })();
+    </script>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
