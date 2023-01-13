@@ -1,6 +1,7 @@
 import Home from "./Home";
 import About from "./About";
 import Portfolio from "./Portfolio";
+import Contact from "./Contact";
 import styled from "styled-components";
 
 const Page = styled.div`
@@ -100,6 +101,13 @@ const Layout = ({ isActive, setIsActive }) => {
         <Header>
           {" "}
           <Portfolio />{" "}
+        </Header>
+      )}
+
+      {isActive.contact && (
+        <Header>
+          {" "}
+          <Contact />{" "}
         </Header>
       )}
 

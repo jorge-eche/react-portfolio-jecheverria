@@ -14,13 +14,14 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html {
-  --white: #FFFFFF;
   --dark-blue: #022c43;
-  --light-yellow: #ffd700;
-  --opaque-yellow: rgba(255,215,0,0.6);
+  --dark-cerulean: #115173;
+  --dark-gray: #444;
   --dark-red: #181818;
   --gun-powder: #4d4d4e;
-  --dark-gray: #444;
+  --light-yellow: #ffd700;
+  --opaque-yellow: rgba(255,215,0,0.6);
+  --white: #FFFFFF;
 }
 
 body {
