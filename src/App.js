@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html {
+  --aqua: ##04466a;
   --dark-blue: #022c43;
   --dark-cerulean: #115173;
   --dark-gray: #444;
@@ -30,6 +31,7 @@ body {
   font-family: 'Roboto', 'sans-serif';
   color: var(--white);
   background-color: var(--dark-blue);
+  background-image: linear-gradient(to right,  #022c43, #04466a);
 }
 `;
 

@@ -33,13 +33,15 @@ const Title = styled.h1`
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  margin: 15px 50px 0;
+  gap: 30px;
+  /* justify-content: space-evenly; */
   /* margin: 0 10px 0; */
 `;
 
-const ParagraphContainer = styled.div`
-  width: 40%;
-`;
+const ParagraphContainer = styled.div``;
+
+const Subtitle = styled.h2``;
 
 const Paragraph = styled.p`
   text-align: justify;
@@ -48,6 +50,7 @@ const Paragraph = styled.p`
   font-size: 1.2rem;
   font-family: sans-serif;
   line-height: 2rem;
+  margin-top: 20px;
 `;
 
 const Form = styled.form`
@@ -57,7 +60,7 @@ const Form = styled.form`
     width: 100px;
     opacity: 0.9;
     color: var(--light-yellow);
-    background-color: var(--dark-blue);
+    background-color: var(--aqua);
     padding: 10px 18px;
     text-transform: uppercase;
     font-family: sans-serif;
@@ -113,20 +116,6 @@ const Contact = () => {
 
       <Container>
         {" "}
-        <ParagraphContainer>
-          <Paragraph>Thank you for visiting my portfolio! </Paragraph>
-          <Paragraph>
-            If you have a project that you would like to discuss or have any
-            questions about my work, please don't hesitate to contact me, I will
-            make sure to respond to your inquiry as soon as possible. You can
-            also find me through social media or the contact info left on my
-            resume.
-          </Paragraph>
-          <Paragraph>
-            I look forward to hearing from you and working together on your next
-            project.
-          </Paragraph>
-        </ParagraphContainer>
         <Form action="">
           <FieldHalf>
             <Field variant="half">
@@ -180,6 +169,25 @@ const Contact = () => {
 
           <input type="submit" value="SEND" />
         </Form>
+        <ParagraphContainer>
+          <Subtitle>Thank you for visiting my portfolio! </Subtitle>
+          <Paragraph>
+            If you have a project that you would like to discuss or have any
+            questions about my work, please don't hesitate to contact me.
+          </Paragraph>
+
+          {/* <Paragraph>
+            You can also find me on social media or the contact info left on my
+            resume.
+          </Paragraph> */}
+          <Paragraph>
+            I look forward to hearing from you and working together on your next
+            project.
+          </Paragraph>
+          <Paragraph>
+            I will make sure to respond to your inquiry as soon as possible.
+          </Paragraph>
+        </ParagraphContainer>
       </Container>
     </>
   );

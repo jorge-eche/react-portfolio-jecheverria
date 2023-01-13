@@ -107,7 +107,7 @@ const Link = styled.a`
   width: 180px;
   opacity: 0.9;
   color: var(--light-yellow);
-  background-color: var(--dark-blue);
+  background-color: var(--aqua);
   padding: 8px 0;
   text-transform: uppercase;
   font-family: sans-serif;

@@ -66,7 +66,7 @@ const Resume = styled.button`
   margin-top: 20px;
   opacity: 0.9;
   color: var(--light-yellow);
-  background-color: var(--dark-blue);
+  background-color: var(--aqua);
   padding: 10px 18px;
   text-transform: uppercase;
   font-family: sans-serif;

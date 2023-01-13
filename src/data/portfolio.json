@@ -23,7 +23,7 @@
     "title": "Cyptocurrency Comparison Website",
     "description": "Site that compares 5 currencies with the 10 most important cryptos with the help of an API",
     "techs": "Developed with HTML, CSS, Javascript, React (custom Hooks), APIs",
-    "url": "cryptos-tracker-react.netlify.app",
+    "url": "https://cryptos-tracker-react.netlify.app",
     "code": "https://github.com/jorge-eche/crypto-react"
   },
 
@@ -33,7 +33,7 @@
     "title": "Expense Tracker App",
     "description": "Application that helps users track their spending by allowing them to create a budget and input/categorize their expenses.",
     "techs": "Developed with HTML, CSS, Javascript and React",
-    "url": "expenses-tracker-jee.netlify.app",
+    "url": "https://expenses-tracker-jee.netlify.app",
     "code": "https://github.com/jorge-eche/expense-tracker"
   }
 ]

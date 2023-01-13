@@ -103,7 +103,7 @@ const ContactButton = styled.button`
   margin-top: 60px;
   opacity: 0.9;
   color: var(--light-yellow);
-  background-color: var(--dark-blue);
+  background-color: var(--aqua);
   padding: 15px 25px;
   text-transform: uppercase;
   font-family: sans-serif;
