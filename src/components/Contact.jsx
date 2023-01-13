@@ -61,6 +61,7 @@ const Thanks = styled.p`
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: auto;
+  color: var(--light-yellow);
 `;
 
 const Form = styled.form`
