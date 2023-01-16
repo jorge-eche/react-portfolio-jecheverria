@@ -117,6 +117,7 @@ const Field = styled.div`
     font-size: 1rem;
     color: var(--white);
     padding: 20px;
+    resize: none;
   }
 `;
 
