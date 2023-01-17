@@ -5,6 +5,7 @@ import Layout from "./components/Layout";
 
 import "./App.css";
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -35,6 +36,12 @@ body {
 }
 `;
 
+const Page = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+`;
+
 function App() {
   const [isActive, setIsActive] = useState({
     home: true,
@@ -46,8 +53,10 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Sidebar isActive={isActive} setIsActive={setIsActive} />
-      <Layout isActive={isActive} setIsActive={setIsActive} />
+      <Page>
+        <Sidebar isActive={isActive} setIsActive={setIsActive} />
+        <Layout isActive={isActive} setIsActive={setIsActive} />
+      </Page>
     </>
   );
 }
