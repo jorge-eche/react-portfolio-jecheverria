@@ -1,13 +1,18 @@
 import styled from "styled-components";
 import JorgePic from "../img/myphoto.jpg";
 
+const AboutPage = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
 const Title = styled.h1`
   font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
-  margin-left: -40px;
+  text-align: center;
   color: var(--light-yellow);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   &:before {
     content: "<h1>";
@@ -33,9 +38,11 @@ const Title = styled.h1`
 `;
 
 const ContainerFlex = styled.div`
+  height: 100%;
   margin-top: 15px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 `;
 
 const ContainerP = styled.div`
@@ -62,6 +69,11 @@ const Photo = styled.img`
   border-radius: 50%;
 `;
 
+const ResumeContainer = styled.a`
+  display: block;
+  text-align: center;
+`;
+
 const Resume = styled.button`
   margin-top: 20px;
   opacity: 0.9;
@@ -83,7 +95,7 @@ const Resume = styled.button`
 
 const About = () => {
   return (
-    <>
+    <AboutPage>
       {" "}
       <Title>About me</Title>
       <ContainerFlex>
@@ -117,13 +129,13 @@ const About = () => {
             {" "}
             <Photo src={JorgePic} alt="My Picture" />
           </ContainerPhoto>
-          <a href="">
+          <ResumeContainer href="">
             {" "}
             <Resume>My Resume</Resume>
-          </a>
+          </ResumeContainer>
         </div>
       </ContainerFlex>
-    </>
+    </AboutPage>
   );
 };
 
