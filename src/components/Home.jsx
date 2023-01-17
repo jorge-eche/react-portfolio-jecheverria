@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
+const HomePage = styled.div`
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+`;
 const Title = styled.h1`
-  position: relative;
   font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
-  margin-left: -40px;
 
   &:before {
     content: "<h1>";
@@ -129,14 +135,14 @@ const Home = ({ setIsActive }) => {
   };
 
   return (
-    <>
+    <HomePage>
       <Title>
         Hello!
         <br /> My name is <span>Jorge Echeverría</span> <br />
         I'm a <TypedOut></TypedOut>
       </Title>
       <ContactButton onClick={handleClick}>Contact Me</ContactButton>
-    </>
+    </HomePage>
   );
 };
 
