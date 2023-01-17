@@ -24,8 +24,8 @@ const Tag = styled.span`
 
 const TopTag = styled(Tag)`
   position: absolute;
-  top: 35px;
-  left: 100px;
+  top: 10px;
+  left: 90px;
   opacity: 0;
   animation: fadeInTag 1s 0.5s forwards;
 
@@ -41,7 +41,7 @@ const TopTag = styled(Tag)`
 
 const BottomTag = styled(Tag)`
   position: absolute;
-  left: 120px;
+  left: 110px;
   bottom: 0;
   opacity: 0;
   animation: fadeInTag 1s 0.5s forwards;
