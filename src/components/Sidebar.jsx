@@ -7,6 +7,7 @@ import {
   faEnvelopeOpen,
   faFolder,
   faFolderOpen,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -25,6 +26,14 @@ const SideBar = styled.div`
   position: fixed;
   top: 0;
   min-height: 500px;
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    min-height: auto;
+    width: 100%;
+  }
 `;
 
 const JELogo = styled.img`
@@ -33,6 +42,9 @@ const JELogo = styled.img`
   padding: 8px 0;
   width: 3.75rem;
   height: auto;
+  @media screen and (max-width: 1200px) {
+    margin: 0;
+  }
 `;
 
 const Nav = styled.nav`
@@ -43,6 +55,20 @@ const Nav = styled.nav`
   top: 50%;
   margin-top: -120px;
   width: 100%;
+  @media screen and (max-width: 1200px) {
+    /* PASARLO A display: flex; al tocar hamburger button */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-red);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+  }
 `;
 
 const PageLink = styled.a`
@@ -84,6 +110,20 @@ const PageLink = styled.a`
   &:active {
     color: var(--light-yellow);
   }
+  @media screen and (max-width: 1200px) {
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      opacity: 1;
+      position: initial;
+      display: initial;
+      margin-left: 10px;
+    }
+  }
 `;
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
@@ -97,6 +137,9 @@ const UList = styled.ul`
   width: 100%;
   list-style: none;
   text-align: center;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 const ListItem = styled.li`
@@ -112,6 +155,13 @@ const ListItem = styled.li`
     &:hover svg {
       color: var(--light-yellow);
     }
+  }
+`;
+
+const BurgerIcon = styled(FontAwesomeIcon)`
+  display: none;
+  @media screen and (max-width: 1200px) {
+    display: initial;
   }
 `;
 
@@ -152,9 +202,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
   };
   return (
     <SideBar>
-      <a href="">
-        <JELogo src={JE} alt="JE" />
-      </a>
+      <JELogo src={JE} alt="JE" />
 
       <Nav>
         <PageLink id="home-link" onClick={activateHome}>
@@ -217,6 +265,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
           </a>
         </ListItem>
       </UList>
+      <BurgerIcon icon={faBars} size="3x" />
     </SideBar>
   );
 };
