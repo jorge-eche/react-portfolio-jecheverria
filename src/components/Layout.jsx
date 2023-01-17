@@ -6,8 +6,7 @@ import styled from "styled-components";
 
 const Page = styled.div`
   width: 100%;
-  height: 100%;
-
+  height: 100vh;
   overflow: hidden;
 `;
 
@@ -59,7 +58,6 @@ const BottomTag = styled(Tag)`
 
 const Header = styled.header`
   margin-top: 100px;
-  margin-left: 60px;
   text-align: center;
   opacity: 0;
   animation: fadeIn 1s ease-in 0.5s forwards;
@@ -83,33 +81,35 @@ const Layout = ({ isActive, setIsActive }) => {
         <Tag leftmargin="positive">&lt;body&gt;</Tag>
       </TopTag>
 
-      {isActive.home && (
-        <Header>
-          {" "}
-          <Home setIsActive={setIsActive} />{" "}
-        </Header>
-      )}
+      <>
+        {isActive.home && (
+          <Header>
+            {" "}
+            <Home setIsActive={setIsActive} />{" "}
+          </Header>
+        )}
 
-      {isActive.about && (
-        <Header>
-          {" "}
-          <About />{" "}
-        </Header>
-      )}
+        {isActive.about && (
+          <Header>
+            {" "}
+            <About />{" "}
+          </Header>
+        )}
 
-      {isActive.portfolio && (
-        <Header>
-          {" "}
-          <Portfolio />{" "}
-        </Header>
-      )}
+        {isActive.portfolio && (
+          <Header>
+            {" "}
+            <Portfolio />{" "}
+          </Header>
+        )}
 
-      {isActive.contact && (
-        <Header>
-          {" "}
-          <Contact />{" "}
-        </Header>
-      )}
+        {isActive.contact && (
+          <Header>
+            {" "}
+            <Contact />{" "}
+          </Header>
+        )}
+      </>
 
       <BottomTag>
         &lt;/body&gt;
