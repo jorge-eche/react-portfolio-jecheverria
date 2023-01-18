@@ -9,11 +9,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Projects from "../data/portfolio.json";
 
+const PortfolioPage = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
 const Title = styled.h1`
   font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
-  margin-left: -40px;
+  text-align: center;
   color: var(--light-yellow);
   margin-bottom: 30px;
 
@@ -97,6 +103,7 @@ const ButtonContainer = styled.div`
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
+  text-align: center;
 `;
 
 const Link = styled.a`
@@ -152,7 +159,7 @@ const Portfolio = () => {
   };
 
   return (
-    <>
+    <PortfolioPage>
       {" "}
       <Title>My Portfolio</Title>
       <Slider>
@@ -182,7 +189,7 @@ const Portfolio = () => {
         )}
         <ArrowIcon icon={faCircleArrowRight} onClick={slideRight} />
       </Slider>
-    </>
+    </PortfolioPage>
   );
 };
 
