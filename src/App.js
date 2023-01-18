@@ -40,6 +40,11 @@ const Page = styled.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
+
+  @media screen and;
+   {
+    flex-direction: column;
+  }
 `;
 
 function App() {

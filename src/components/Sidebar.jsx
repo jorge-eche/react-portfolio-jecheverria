@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,6 +9,7 @@ import {
   faFolder,
   faFolderOpen,
   faBars,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -28,7 +30,11 @@ const SideBar = styled.div`
     align-items: center;
     height: auto;
     min-height: auto;
-    width: 100%; */
+    width: 100%;
+  } */
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    height: initial;
   }
 `;
 
@@ -39,15 +45,61 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 10px 0 10px;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    height: auto;
+    padding: 0 10px 0;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  ${(props) =>
+    props.mobileShow === "yes" &&
+    `@media screen and (max-width: 1200px) {
+      background-color: var(--dark-red);
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 10px 0;
+      align-items: flex-start;
+
+    ${JELogo} {
+      display:none;
+    }
+
+    ${Nav} {
+      display: block;
+      }
+
+    ${BurgerIcon} {
+    }
+
+    ${PageLink} {
+      &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      opacity: 1;
+      position: initial;
+      display: initial;
+      margin-left: 10px;
+    }
+    }
+
+    }`}
 `;
 
 const JELogo = styled.img`
   display: block;
   width: 60px;
   height: 60px;
-  /* @media screen and (max-width: 1200px) {
-    margin: 0;
-  } */
 `;
 
 const Nav = styled.nav`
@@ -55,20 +107,9 @@ const Nav = styled.nav`
   display: block;
   height: 210px;
   width: 100%;
-  /* @media screen and (max-width: 1200px) {
-    PASARLO A display: flex; al tocar hamburger button
+  @media screen and (max-width: 1200px) {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: var(--dark-red);
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    margin: 0;
-  } */
+  }
 `;
 
 const PageLink = styled.a`
@@ -110,7 +151,8 @@ const PageLink = styled.a`
   &:active {
     color: var(--light-yellow);
   }
-  /* @media screen and (max-width: 1200px) {
+`;
+/* @media screen and (max-width: 1200px) {
     &:hover {
       svg {
         opacity: 1;
@@ -124,7 +166,6 @@ const PageLink = styled.a`
       margin-left: 10px;
     }
   } */
-`;
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: ${(props) =>
@@ -135,9 +176,9 @@ const UList = styled.ul`
   width: 100%;
   list-style: none;
   text-align: center;
-  /* @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     display: none;
-  } */
+  }
 `;
 
 const ListItem = styled.li`
@@ -158,12 +199,14 @@ const ListItem = styled.li`
 
 const BurgerIcon = styled(FontAwesomeIcon)`
   display: none;
-  /* @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     display: initial;
-  } */
+  }
 `;
 
 const Sidebar = ({ isActive, setIsActive }) => {
+  const [mobileShowNavMenu, setMobileShowNavMenu] = useState(false);
+
   const activateHome = () => {
     setIsActive({
       home: true,
@@ -200,7 +243,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
   };
   return (
     <SideBar>
-      <Container>
+      <Container mobileShow={mobileShowNavMenu ? "yes" : ""}>
         <JELogo src={JE} alt="JE" />
 
         <Nav>
@@ -265,7 +308,15 @@ const Sidebar = ({ isActive, setIsActive }) => {
           </ListItem>
         </UList>
 
-        <BurgerIcon icon={faBars} size="3x" />
+        <BurgerIcon
+          icon={mobileShowNavMenu ? faXmark : faBars}
+          size="3x"
+          onClick={() =>
+            !mobileShowNavMenu
+              ? setMobileShowNavMenu(true)
+              : setMobileShowNavMenu(false)
+          }
+        />
       </Container>
     </SideBar>
   );
