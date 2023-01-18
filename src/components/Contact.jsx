@@ -2,11 +2,17 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 
+const ContactPage = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
 const Title = styled.h1`
   font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
-  margin-left: -40px;
+  text-align: center;
   color: var(--light-yellow);
   margin-bottom: 30px;
 
@@ -34,9 +40,14 @@ const Title = styled.h1`
 `;
 
 const Container = styled.div`
+  height: 100%;
   display: flex;
-  margin: 15px 50px 0;
+  justify-content: space-around;
+  padding: 40px;
   gap: 30px;
+  /* display: flex; */
+  /* margin: 15px 50px 0; */
+  /* gap: 30px; */
   /* justify-content: space-evenly; */
   /* margin: 0 10px 0; */
 `;
@@ -44,7 +55,6 @@ const Container = styled.div`
 const ParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-content: stretch;
 `;
 
 const Paragraph = styled.p`
@@ -62,6 +72,7 @@ const Thanks = styled.p`
   font-weight: 700;
   margin-top: auto;
   color: var(--light-yellow);
+  text-align: center;
 `;
 
 const Form = styled.form`
@@ -146,7 +157,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <ContactPage>
       <Title>Contact me</Title>
 
       <Container>
@@ -225,7 +236,7 @@ const Contact = () => {
           <Thanks>Thank you for visiting my portfolio! </Thanks>
         </ParagraphContainer>
       </Container>
-    </>
+    </ContactPage>
   );
 };
 
