@@ -55,11 +55,18 @@ function App() {
     contact: false,
   });
 
+  const [mobileShowNavMenu, setMobileShowNavMenu] = useState(false);
+
   return (
     <>
       <GlobalStyle />
       <Page>
-        <Sidebar isActive={isActive} setIsActive={setIsActive} />
+        <Sidebar
+          isActive={isActive}
+          setIsActive={setIsActive}
+          mobileShowNavMenu={mobileShowNavMenu}
+          setMobileShowNavMenu={setMobileShowNavMenu}
+        />
         <Layout isActive={isActive} setIsActive={setIsActive} />
       </Page>
     </>

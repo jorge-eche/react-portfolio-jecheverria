@@ -57,6 +57,7 @@ const Container = styled.div`
   ${(props) =>
     props.mobileShow === "yes" &&
     `@media screen and (max-width: 1200px) {
+      overflow: hidden;
       background-color: var(--dark-red);
       z-index: 1;
       position: absolute;
@@ -66,32 +67,53 @@ const Container = styled.div`
       right: 0;
       padding: 10px 10px 0;
       align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
 
-    ${JELogo} {
-      display:none;
-    }
-
-    ${Nav} {
-      display: block;
+      ${JELogo} {
+        display:none;
       }
 
-    ${BurgerIcon} {
-    }
+      ${Nav} {
+        display: flex;
+        flex-direction: column;
 
-    ${PageLink} {
-      &:hover {
-      svg {
-        opacity: 1;
+        a {
+          display: inline;
+        }
       }
-    }
 
-    &:after {
-      opacity: 1;
-      position: initial;
-      display: initial;
-      margin-left: 10px;
-    }
-    }
+      ${UList} {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        li {
+          display: inline;
+          font-size: 1.2rem;
+        }
+      }
+
+      ${BurgerIcon} {
+        position: absolute;
+        top: 0;
+        right:0.625rem;
+      }
+
+      ${PageLink} {
+        &:hover {
+          svg {
+            opacity: 1;
+          }
+        }
+
+        &:after {
+          opacity: 1;
+          position: initial;
+          display: initial;
+          margin-left: 10px;
+        }
+      }
 
     }`}
 `;
@@ -204,9 +226,12 @@ const BurgerIcon = styled(FontAwesomeIcon)`
   }
 `;
 
-const Sidebar = ({ isActive, setIsActive }) => {
-  const [mobileShowNavMenu, setMobileShowNavMenu] = useState(false);
-
+const Sidebar = ({
+  isActive,
+  setIsActive,
+  mobileShowNavMenu,
+  setMobileShowNavMenu,
+}) => {
   const activateHome = () => {
     setIsActive({
       home: true,
@@ -214,6 +239,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
       portfolio: false,
       contact: false,
     });
+    setMobileShowNavMenu(false);
   };
 
   const activateAbout = () => {
@@ -223,6 +249,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
       portfolio: false,
       contact: false,
     });
+    setMobileShowNavMenu(false);
   };
 
   const activatePortfolio = () => {
@@ -232,6 +259,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
       portfolio: true,
       contact: false,
     });
+    setMobileShowNavMenu(false);
   };
   const activateContact = () => {
     setIsActive({
@@ -240,6 +268,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
       portfolio: false,
       contact: true,
     });
+    setMobileShowNavMenu(false);
   };
   return (
     <SideBar>
@@ -253,21 +282,18 @@ const Sidebar = ({ isActive, setIsActive }) => {
               active={isActive.home ? "yes" : ""}
             />
           </PageLink>
-
           <PageLink id="about-link" onClick={activateAbout}>
             <StyledFontAwesomeIcon
               icon={faUser}
               active={isActive.about ? "yes" : ""}
             />
           </PageLink>
-
           <PageLink id="mywork-link" onClick={activatePortfolio}>
             <StyledFontAwesomeIcon
               icon={isActive.portfolio ? faFolderOpen : faFolder}
               active={isActive.portfolio ? "yes" : ""}
             />
           </PageLink>
-
           <PageLink id="contact-link" onClick={activateContact}>
             <StyledFontAwesomeIcon
               icon={isActive.contact ? faEnvelopeOpen : faEnvelope}
