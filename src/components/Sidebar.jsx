@@ -78,9 +78,12 @@ const Container = styled.div`
       ${Nav} {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         a {
-          display: inline;
+          display: inline-block;
+          width: 6.25rem;
         }
       }
 

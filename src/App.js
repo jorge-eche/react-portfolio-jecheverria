@@ -41,8 +41,7 @@ const Page = styled.div`
   min-height: 100vh;
   display: flex;
 
-  @media screen and;
-   {
+  @media screen and (max-width: 1200px) {
     flex-direction: column;
   }
 `;
