@@ -44,6 +44,14 @@ const Title = styled.h1`
   span:nth-child(4) {
     font-size: 1em;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+    span:nth-child(2):after {
+      top: 5em;
+      left: 4em;
+    }
+  }
 `;
 
 const TypedOut = styled.span`
