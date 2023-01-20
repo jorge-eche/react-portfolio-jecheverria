@@ -19,20 +19,14 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import JE from "../img/je.png";
+import JEBlue from "../img/jebluebackground.png";
 
 const SideBar = styled.div`
   background-color: var(--dark-red);
   width: 60px;
   height: 100vh;
-  /* @media screen and (max-width: 1200px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
-    min-height: auto;
-    width: 100%;
-  } */
   @media screen and (max-width: 1200px) {
+    background-color: transparent;
     width: 100%;
     height: initial;
   }
@@ -125,6 +119,19 @@ const JELogo = styled.img`
   display: block;
   width: 60px;
   height: 60px;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+`;
+
+const JELogoMobile = styled.img`
+  display: none;
+
+  @media screen and (max-width: 1200px) {
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const Nav = styled.nav`
@@ -177,20 +184,6 @@ const PageLink = styled.a`
     color: var(--light-yellow);
   }
 `;
-/* @media screen and (max-width: 1200px) {
-    &:hover {
-      svg {
-        opacity: 1;
-      }
-    }
-
-    &:after {
-      opacity: 1;
-      position: initial;
-      display: initial;
-      margin-left: 10px;
-    }
-  } */
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: ${(props) =>
@@ -277,6 +270,7 @@ const Sidebar = ({
     <SideBar>
       <Container mobileShow={mobileShowNavMenu ? "yes" : ""}>
         <JELogo src={JE} alt="JE" />
+        <JELogoMobile src={JEBlue} alt="JE" />
 
         <Nav>
           <PageLink id="home-link" onClick={activateHome}>
@@ -340,6 +334,7 @@ const Sidebar = ({
         <BurgerIcon
           icon={mobileShowNavMenu ? faXmark : faBars}
           size="3x"
+          color={mobileShowNavMenu ? "var(--light-yellow)" : ""}
           onClick={() =>
             !mobileShowNavMenu
               ? setMobileShowNavMenu(true)

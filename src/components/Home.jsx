@@ -20,8 +20,8 @@ const Title = styled.h1`
     color: var(--light-yellow);
     opacity: 0.6;
     position: relative;
-    top: -50px;
-    left: -30px;
+    top: -3em;
+    left: -1.8em;
   }
 
   span {
@@ -37,8 +37,8 @@ const Title = styled.h1`
       color: var(--light-yellow);
       opacity: 0.6;
       position: relative;
-      top: 150px;
-      left: -90px;
+      top: 9.3em;
+      left: -5.6em;
     }
   }
   span:nth-child(4) {
@@ -62,11 +62,12 @@ const TypedOut = styled.span`
       }
       30% {
         content: "Lawyer and...";
-        width: 420px;
+        width: 5.25em;
+        //420px
       }
       35% {
         content: "Lawyer and...";
-        width: 420px;
+        width: 5.25em;
       }
       40% {
         content: "Lawyer and...";
@@ -77,11 +78,12 @@ const TypedOut = styled.span`
       }
       70% {
         content: "Frontend Developer";
-        width: 650px;
+        width: 8.125em;
+        //650px
       }
       95% {
         content: "Frontend Developer";
-        width: 650px;
+        width: 8.125em;
       }
       100% {
         content: "Frontend Developer";
