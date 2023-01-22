@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 const HomePage = styled.div`
   text-align: center;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  @media screen and (max-width: 1200px) {
+    height: 100%;
+  }
 `;
+
 const Title = styled.h1`
   font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
@@ -131,6 +134,9 @@ const ContactButton = styled.button`
     cursor: pointer;
     color: var(--dark-blue);
     background-color: var(--light-yellow);
+  }
+  @media screen and (max-width: 1200px) {
+    margin-top: initial;
   }
 `;
 

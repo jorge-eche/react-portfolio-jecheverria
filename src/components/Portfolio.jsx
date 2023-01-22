@@ -10,7 +10,6 @@ import {
 import Projects from "../data/portfolio.json";
 
 const PortfolioPage = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
 `;

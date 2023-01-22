@@ -24,11 +24,12 @@ html {
   --light-yellow: #ffd700;
   --opaque-yellow: rgba(255,215,0,0.6);
   --white: #FFFFFF;
+  height: 100%;
 }
 
 body {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   font-family: 'Roboto', 'sans-serif';
   color: var(--white);
   background-color: var(--dark-blue);
@@ -37,12 +38,11 @@ body {
 `;
 
 const Page = styled.div`
-  width: 100%;
-  min-height: 100vh;
   display: flex;
 
   @media screen and (max-width: 1200px) {
     flex-direction: column;
+    height: 100vh;
   }
 `;
 

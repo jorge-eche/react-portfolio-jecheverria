@@ -6,10 +6,13 @@ import styled from "styled-components";
 
 const Page = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  justify-content: space-around;
+  @media screen and (max-width: 1200px) {
+    height: 100%;
+  }
 `;
 
 const Tag = styled.span`
@@ -27,7 +30,6 @@ const Tag = styled.span`
 const TopTag = styled(Tag)`
   display: block;
   position: relative;
-  top: 20px;
   left: 30px;
   opacity: 0;
   animation: fadeInTag 1s 0.5s forwards;
@@ -61,7 +63,6 @@ const BottomTag = styled(Tag)`
 
 const Header = styled.header`
   opacity: 0;
-  height: 100vh;
   animation: fadeIn 1s ease-in 0.5s forwards;
 
   @keyframes fadeIn {
@@ -71,6 +72,9 @@ const Header = styled.header`
     to {
       opacity: 1;
     }
+  }
+  @media screen and (max-width: 1200px) {
+    flex-grow: 2;
   }
 `;
 

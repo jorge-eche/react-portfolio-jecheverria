@@ -270,7 +270,7 @@ const Sidebar = ({
     <SideBar>
       <Container mobileShow={mobileShowNavMenu ? "yes" : ""}>
         <JELogo src={JE} alt="JE" />
-        <JELogoMobile src={JEBlue} alt="JE" />
+        {!mobileShowNavMenu ? <JELogoMobile src={JEBlue} alt="JE" /> : null}
 
         <Nav>
           <PageLink id="home-link" onClick={activateHome}>
