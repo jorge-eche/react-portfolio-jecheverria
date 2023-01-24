@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const HomePage = styled.div`
+  height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   @media screen and (max-width: 1200px) {
     height: 100%;

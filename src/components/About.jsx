@@ -2,6 +2,7 @@ import styled from "styled-components";
 import JorgePic from "../img/myphoto.jpg";
 
 const AboutPage = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 1200px) {

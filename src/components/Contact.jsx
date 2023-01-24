@@ -3,6 +3,7 @@ import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 
 const ContactPage = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
 `;

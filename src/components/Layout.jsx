@@ -9,7 +9,6 @@ const Page = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  justify-content: space-around;
   @media screen and (max-width: 1200px) {
     height: 100%;
   }
@@ -62,6 +61,7 @@ const BottomTag = styled(Tag)`
 `;
 
 const Header = styled.header`
+  flex-basis: 90%;
   opacity: 0;
   animation: fadeIn 1s ease-in 0.5s forwards;
 
