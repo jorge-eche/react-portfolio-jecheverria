@@ -58,6 +58,9 @@ const BottomTag = styled(Tag)`
       opacity: 0.6;
     }
   }
+  @media screen and (max-width: 1200px) {
+    bottom: 80px;
+  }
 `;
 
 const Header = styled.header`

@@ -139,8 +139,8 @@ const JELogoMobile = styled.img`
 
   @media screen and (max-width: 1200px) {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
   }
 `;
 
@@ -343,7 +343,7 @@ const Sidebar = ({
 
         <BurgerIcon
           icon={mobileShowNavMenu ? faXmark : faBars}
-          size="3x"
+          size="2x"
           color={mobileShowNavMenu ? "var(--light-yellow)" : ""}
           onClick={() =>
             !mobileShowNavMenu
