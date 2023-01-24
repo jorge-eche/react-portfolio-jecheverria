@@ -4,7 +4,7 @@ import JorgePic from "../img/myphoto.jpg";
 const AboutPage = styled.div`
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     height: 100%;
   }
 `;
@@ -37,7 +37,7 @@ const Title = styled.h1`
     top: 20px;
     left: 30px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     flex-basis: 15%;
     display: flex;
     justify-content: center;
@@ -58,7 +58,7 @@ const ContainerFlex = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     flex-direction: column;
     margin-top: 0;
   }
@@ -66,7 +66,7 @@ const ContainerFlex = styled.div`
 
 const ContainerP = styled.div`
   flex-basis: 60%;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     flex-basis: initial;
     padding: 0 1rem 0;
   }
@@ -80,7 +80,7 @@ const Paragraph = styled.p`
   font-family: sans-serif;
   line-height: 2rem;
   margin-bottom: 20px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     font-size: 0.9rem;
     line-height: 1.3rem;
     margin-bottom: 0;
@@ -92,14 +92,14 @@ const ContainerPhoto = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     margin-bottom: 16px;
   }
 `;
 
 const Photo = styled.img`
   border-radius: 50%;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     width: 5rem;
     height: 5rem;
   }
@@ -127,7 +127,7 @@ const Resume = styled.button`
     color: var(--dark-blue);
     background-color: var(--light-yellow);
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     margin-top: 0;
   }
 `;

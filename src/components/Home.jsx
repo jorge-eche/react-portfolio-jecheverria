@@ -48,7 +48,7 @@ const Title = styled.h1`
     font-size: 1em;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     font-size: 2rem;
     span:nth-child(2):after {
       top: 5em;

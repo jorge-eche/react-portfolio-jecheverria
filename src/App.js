@@ -34,6 +34,7 @@ body {
   color: var(--white);
   background-color: var(--dark-blue);
   background-image: linear-gradient(to right,  #022c43, #04466a);
+  overflow: hidden;
 }
 `;
 
