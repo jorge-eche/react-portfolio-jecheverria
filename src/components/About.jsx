@@ -4,6 +4,9 @@ import JorgePic from "../img/myphoto.jpg";
 const AboutPage = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    height: 100%;
+  }
 `;
 const Title = styled.h1`
   font-size: 5rem;
@@ -34,6 +37,19 @@ const Title = styled.h1`
     top: 20px;
     left: 30px;
   }
+  @media screen and (max-width: 768px) {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    &:before {
+      top: -20px;
+      left: -20px;
+    }
+  }
 `;
 
 const ContainerFlex = styled.div`
@@ -42,10 +58,18 @@ const ContainerFlex = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 0;
+  }
 `;
 
 const ContainerP = styled.div`
   flex-basis: 60%;
+  @media screen and (max-width: 768px) {
+    flex-basis: initial;
+    padding: 0 1rem 0;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -56,16 +80,29 @@ const Paragraph = styled.p`
   font-family: sans-serif;
   line-height: 2rem;
   margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    margin-bottom: 0;
+  }
 `;
 
 const ContainerPhoto = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 40px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const Photo = styled.img`
   border-radius: 50%;
+  @media screen and (max-width: 768px) {
+    width: 5rem;
+    height: 5rem;
+  }
 `;
 
 const ResumeContainer = styled.a`
@@ -89,6 +126,9 @@ const Resume = styled.button`
     cursor: pointer;
     color: var(--dark-blue);
     background-color: var(--light-yellow);
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
   }
 `;
 

@@ -36,6 +36,12 @@ const Title = styled.h1`
     top: 20px;
     left: 30px;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+    span:nth-child(2):after {
+      top: 5em;
+      left: 4em;
+    }
 `;
 
 const Container = styled.div`
