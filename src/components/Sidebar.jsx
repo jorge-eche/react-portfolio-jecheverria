@@ -25,7 +25,7 @@ const SideBar = styled.div`
   background-color: var(--dark-red);
   width: 60px;
   height: 100vh;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     background-color: transparent;
     width: 100%;
     height: initial;
@@ -40,7 +40,7 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 10px 0 10px;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     width: 100%;
     height: auto;
     padding: 0 10px 0;
@@ -103,8 +103,8 @@ const Container = styled.div`
 
       ${BurgerIcon} {
         position: absolute;
-        top: 0;
-        right:0.625rem;
+        top: 10px;
+        right:10px;
       }
 
       ${PageLink} {
@@ -128,8 +128,7 @@ const Container = styled.div`
 const JELogo = styled.img`
   display: block;
   width: 60px;
-  height: 60px;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     display: none;
   }
 `;
@@ -137,10 +136,9 @@ const JELogo = styled.img`
 const JELogoMobile = styled.img`
   display: none;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 60px;
   }
 `;
 
@@ -149,7 +147,7 @@ const Nav = styled.nav`
   display: block;
   height: 210px;
   width: 100%;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     display: none;
   }
 `;
@@ -204,7 +202,7 @@ const UList = styled.ul`
   width: 100%;
   list-style: none;
   text-align: center;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     display: none;
   }
 `;
@@ -227,7 +225,7 @@ const ListItem = styled.li`
 
 const BurgerIcon = styled(FontAwesomeIcon)`
   display: none;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     display: initial;
   }
 `;
@@ -343,7 +341,7 @@ const Sidebar = ({
 
         <BurgerIcon
           icon={mobileShowNavMenu ? faXmark : faBars}
-          size="2x"
+          size="3x"
           color={mobileShowNavMenu ? "var(--light-yellow)" : ""}
           onClick={() =>
             !mobileShowNavMenu

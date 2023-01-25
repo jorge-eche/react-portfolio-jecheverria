@@ -9,7 +9,7 @@ const Page = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     height: 100%;
   }
 `;
@@ -58,7 +58,7 @@ const BottomTag = styled(Tag)`
       opacity: 0.6;
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     bottom: 80px;
   }
 `;
@@ -76,7 +76,7 @@ const Header = styled.header`
       opacity: 1;
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     flex-grow: 2;
   }
 `;

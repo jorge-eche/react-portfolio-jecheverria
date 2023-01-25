@@ -7,7 +7,7 @@ const HomePage = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     height: 100%;
   }
 `;
@@ -49,7 +49,7 @@ const Title = styled.h1`
     font-size: 1em;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     font-size: 2rem;
     span:nth-child(2):after {
       top: 5em;
@@ -136,7 +136,7 @@ const ContactButton = styled.button`
     color: var(--dark-blue);
     background-color: var(--light-yellow);
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     margin-top: initial;
   }
 `;

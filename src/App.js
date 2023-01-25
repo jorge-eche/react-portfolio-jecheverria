@@ -41,7 +41,7 @@ body {
 const Page = styled.div`
   display: flex;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
     flex-direction: column;
     height: 100vh;
   }
