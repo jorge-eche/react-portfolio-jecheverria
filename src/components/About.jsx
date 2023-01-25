@@ -43,12 +43,15 @@ const Title = styled.h1`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-top: 1rem;
     margin-bottom: 0;
     &:before {
       top: -20px;
       left: -20px;
+    }
+    &:after {
+      top: 45px;
     }
   }
 `;
@@ -60,8 +63,7 @@ const ContainerFlex = styled.div`
   justify-content: space-around;
   align-items: center;
   @media screen and (max-width: 600px) {
-    flex-direction: column;
-    margin-top: 0;
+    display: block;
   }
 `;
 
@@ -82,10 +84,14 @@ const Paragraph = styled.p`
   line-height: 2rem;
   margin-bottom: 20px;
   @media screen and (max-width: 600px) {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.3rem;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
+`;
+
+const ContainerPhotoResume = styled.div`
+  margin-top: 50px;
 `;
 
 const ContainerPhoto = styled.div`
@@ -163,7 +169,7 @@ const About = () => {
             fanatic and above all web development obssesed !!!
           </Paragraph>
         </ContainerP>
-        <div>
+        <ContainerPhotoResume>
           {" "}
           <ContainerPhoto>
             {" "}
@@ -173,7 +179,7 @@ const About = () => {
             {" "}
             <Resume>My Resume</Resume>
           </ResumeContainer>
-        </div>
+        </ContainerPhotoResume>
       </ContainerFlex>
     </AboutPage>
   );
