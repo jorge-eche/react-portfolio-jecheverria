@@ -43,8 +43,7 @@ const Title = styled.h1`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
-    margin-top: 1rem;
+    font-size: 2rem;
     margin-bottom: 0;
     &:before {
       top: -20px;
@@ -84,14 +83,14 @@ const Paragraph = styled.p`
   line-height: 2rem;
   margin-bottom: 20px;
   @media screen and (max-width: 600px) {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     line-height: 1.3rem;
     margin-bottom: 10px;
   }
 `;
 
 const ContainerPhotoResume = styled.div`
-  margin-top: 50px;
+  margin-top: 25px;
 `;
 
 const ContainerPhoto = styled.div`
