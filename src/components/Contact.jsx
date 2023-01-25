@@ -101,19 +101,28 @@ const Form = styled.form`
 
 const FieldHalf = styled.div`
   display: flex;
-  justify-content: space-between;
   gap: 0.5rem;
+  margin-bottom: 10px;
   @media screen and (max-width: 600px) {
-    gap: 8px;
-    overflow: hidden;
+  }
+`;
+
+const FieldUpper = styled.div`
+  input[type="text"],
+  input[type="email"] {
+    background-color: var(--dark-cerulean);
+    height: 50px;
+    font-size: 1rem;
+    color: var(--white);
+    padding: 0 20px;
+    border: 0;
+    width: 100%;
   }
 `;
 
 const Field = styled.div`
   margin-bottom: 10px;
-  input[type="text"],
-  input[type="email"] {
-    display: block;
+  input[type="text"] {
     background-color: var(--dark-cerulean);
     height: 50px;
     font-size: 1rem;
@@ -207,7 +216,7 @@ const Contact = () => {
         {" "}
         <Form ref={form} onSubmit={sendEmail}>
           <FieldHalf>
-            <Field variant="half">
+            <FieldUpper>
               <label htmlFor="name">
                 <input
                   id="name"
@@ -217,9 +226,9 @@ const Contact = () => {
                   required
                 />
               </label>
-            </Field>
+            </FieldUpper>
 
-            <Field variant="half">
+            <FieldUpper>
               <label htmlFor="email">
                 <input
                   id="email"
@@ -229,7 +238,7 @@ const Contact = () => {
                   required
                 />
               </label>
-            </Field>
+            </FieldUpper>
           </FieldHalf>
 
           <Field>
