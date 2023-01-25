@@ -37,11 +37,20 @@ const Title = styled.h1`
     top: 20px;
     left: 30px;
   }
+
   @media screen and (max-width: 600px) {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
-    span:nth-child(2):after {
-      top: 5em;
-      left: 4em;
+    margin-bottom: 0;
+    &:before {
+      top: -20px;
+      left: -20px;
+    }
+    &:after {
+      top: 45px;
     }
   }
 `;
@@ -52,29 +61,11 @@ const Container = styled.div`
   justify-content: space-around;
   padding: 40px;
   gap: 30px;
-`;
-
-const ParagraphContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Paragraph = styled.p`
-  text-align: justify;
-  text-justify: inter-word;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
-  font-family: sans-serif;
-  line-height: 2rem;
-  margin-bottom: 10px;
-`;
-
-const Thanks = styled.p`
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-top: auto;
-  color: var(--light-yellow);
-  text-align: center;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    padding: 0 10px;
+    justify-content: flex-start;
+  }
 `;
 
 const Form = styled.form`
@@ -99,12 +90,22 @@ const Form = styled.form`
       background-color: var(--light-yellow);
     }
   }
+  @media screen and (max-width: 600px) {
+    order: 2;
+    input[type="submit"] {
+      align-self: center;
+      margin-top: 20px;
+    }
+  }
 `;
 
 const FieldHalf = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.5rem;
+  @media screen and (max-width: 600px) {
+    gap: 0;
+  }
 `;
 
 const Field = styled.div`
@@ -132,6 +133,42 @@ const Field = styled.div`
     padding: 20px;
     resize: none;
   }
+  @media screen and (max-width: 600px) {
+    input[type="text"],
+    input[type="email"] {
+      padding: 0;
+    }
+  }
+`;
+
+const ParagraphContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 600px) {
+    order: 1;
+  }
+`;
+
+const Paragraph = styled.p`
+  text-align: justify;
+  text-justify: inter-word;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  line-height: 2rem;
+  margin-bottom: 10px;
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+`;
+
+const Thanks = styled.p`
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: auto;
+  color: var(--light-yellow);
+  text-align: center;
 `;
 
 const Contact = () => {

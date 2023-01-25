@@ -149,13 +149,16 @@ const Description = styled.h2`
   @media screen and (max-width: 600px) {
     font-size: 1.1rem;
     text-align: center;
+    padding: 0 10px;
   }
 `;
 
 const Techs = styled.h3`
   opacity: 0.8;
   @media screen and (max-width: 600px) {
+    padding: 0 10px;
     font-size: 0.9rem;
+    text-align: center;
   }
 `;
 
