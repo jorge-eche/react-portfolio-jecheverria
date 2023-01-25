@@ -104,7 +104,8 @@ const FieldHalf = styled.div`
   justify-content: space-between;
   gap: 0.5rem;
   @media screen and (max-width: 600px) {
-    gap: 0;
+    gap: 8px;
+    overflow: hidden;
   }
 `;
 
@@ -136,7 +137,10 @@ const Field = styled.div`
   @media screen and (max-width: 600px) {
     input[type="text"],
     input[type="email"] {
-      padding: 0;
+      padding: 0 0 0 5px;
+    }
+    input[name="name"] {
+      flex-basis: 40%;
     }
   }
 `;
