@@ -9,6 +9,7 @@ const HomePage = styled.div`
   align-items: center;
   @media screen and (max-width: 600px) {
     height: 100%;
+    justify-content: space-evenly;
   }
 `;
 
@@ -50,10 +51,16 @@ const Title = styled.h1`
   }
 
   @media screen and (max-width: 600px) {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    &:before {
+    }
+
+    span:nth-child(2) {
+      display: inline-block;
+    }
     span:nth-child(2):after {
-      top: 5em;
-      left: 4em;
+      top: 90px;
+      left: 0;
     }
   }
 `;
