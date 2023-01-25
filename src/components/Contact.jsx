@@ -52,11 +52,6 @@ const Container = styled.div`
   justify-content: space-around;
   padding: 40px;
   gap: 30px;
-  /* display: flex; */
-  /* margin: 15px 50px 0; */
-  /* gap: 30px; */
-  /* justify-content: space-evenly; */
-  /* margin: 0 10px 0; */
 `;
 
 const ParagraphContainer = styled.div`

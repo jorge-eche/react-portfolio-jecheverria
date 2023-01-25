@@ -45,10 +45,18 @@ const Title = styled.h1`
     left: 30px;
   }
   @media screen and (max-width: 600px) {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
-    span:nth-child(2):after {
-      top: 5em;
-      left: 4em;
+    margin-bottom: 0;
+    &:before {
+      top: -20px;
+      left: -20px;
+    }
+    &:after {
+      top: 45px;
     }
   }
 `;
@@ -58,13 +66,40 @@ const Slider = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 1500px;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    width: auto;
+  }
+`;
+
+const ContainerArrowsMobile = styled.div`
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
 `;
 
 const ArrowIcon = styled(FontAwesomeIcon)`
   font-size: 20px;
   height: 51px;
+  display: ${(props) =>
+    props.variant === "left-desktop"
+      ? ""
+      : props.variant === "left-mobile"
+      ? "none"
+      : ""};
   &:hover {
     cursor: pointer;
+  }
+  @media screen and (max-width: 600px) {
+    display: ${(props) =>
+      props.variant === "left-desktop"
+        ? "none"
+        : props.variant === "left-mobile"
+        ? "initial"
+        : ""};
   }
 `;
 
@@ -74,6 +109,10 @@ const ProjectContainer = styled.div`
   align-items: center;
   width: 900px;
   height: 400px;
+  @media screen and (max-width: 600px) {
+    width: auto;
+    height: auto;
+  }
 `;
 
 const ProjectImage = styled.img`
@@ -82,6 +121,10 @@ const ProjectImage = styled.img`
   margin-bottom: 30px;
   box-shadow: 1em 1em 2em #000;
   border-radius: 10px;
+  @media screen and (max-width: 600px) {
+    width: 350px;
+    height: 175px;
+  }
 `;
 
 const ProjectTitle = styled.h1`
@@ -95,15 +138,25 @@ const ProjectTitle = styled.h1`
     background-color: var(--light-yellow);
     margin: 10px auto 0 auto;
   }
+  @media screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Description = styled.h2`
   font-weight: 400;
   margin-bottom: 15px;
+  @media screen and (max-width: 600px) {
+    font-size: 1.1rem;
+    text-align: center;
+  }
 `;
 
 const Techs = styled.h3`
   opacity: 0.8;
+  @media screen and (max-width: 600px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -171,7 +224,11 @@ const Portfolio = () => {
       <Title>My Portfolio</Title>
       <Slider>
         {" "}
-        <ArrowIcon icon={faCircleArrowLeft} onClick={slideLeft} />
+        <ArrowIcon
+          variant="left-desktop"
+          icon={faCircleArrowLeft}
+          onClick={slideLeft}
+        />
         {Projects.map((project, index) =>
           index === current ? (
             <ProjectContainer
@@ -194,7 +251,14 @@ const Portfolio = () => {
             </ProjectContainer>
           ) : null
         )}
-        <ArrowIcon icon={faCircleArrowRight} onClick={slideRight} />
+        <ContainerArrowsMobile>
+          <ArrowIcon
+            variant="left-mobile"
+            icon={faCircleArrowLeft}
+            onClick={slideLeft}
+          />
+          <ArrowIcon icon={faCircleArrowRight} onClick={slideRight} />
+        </ContainerArrowsMobile>
       </Slider>
     </PortfolioPage>
   );
