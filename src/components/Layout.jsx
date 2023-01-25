@@ -41,6 +41,9 @@ const TopTag = styled(Tag)`
       opacity: 0.6;
     }
   }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const BottomTag = styled(Tag)`
@@ -59,7 +62,7 @@ const BottomTag = styled(Tag)`
     }
   }
   @media screen and (max-width: 600px) {
-    bottom: 80px;
+    display: none;
   }
 `;
 
