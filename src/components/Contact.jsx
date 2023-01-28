@@ -106,7 +106,7 @@ const FieldHalf = styled.div`
 `;
 
 const FieldUpper = styled.div`
-  width: calc(50% - 10px);
+  width: ${(props) => (props.variant === "email" ? "50%" : "calc(50% - 10px)")};
   input[type="text"],
   input[type="email"] {
     background-color: var(--dark-cerulean);
@@ -231,7 +231,7 @@ const Contact = () => {
               </label>
             </FieldUpper>
 
-            <FieldUpper>
+            <FieldUpper variant="email">
               <label htmlFor="email">
                 <input
                   id="email"
