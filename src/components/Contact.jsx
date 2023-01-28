@@ -137,6 +137,7 @@ const Field = styled.div`
     width: 100%;
   }
   textarea {
+    font-family: arial;
     width: 100%;
     height: 150px;
     border: 0;
@@ -146,14 +147,6 @@ const Field = styled.div`
     padding: 20px;
     resize: none;
   }
-  @media screen and (max-width: 600px) {
-    input[type="text"],
-    input[type="email"] {
-      padding: 0 0 0 5px;
-    }
-    input[name="name"] {
-      flex-basis: 40%;
-    }
   }
 `;
 
