@@ -103,11 +103,10 @@ const FieldHalf = styled.div`
   display: flex;
   gap: 0.5rem;
   margin-bottom: 10px;
-  @media screen and (max-width: 600px) {
-  }
 `;
 
 const FieldUpper = styled.div`
+  width: calc(50% - 10px);
   input[type="text"],
   input[type="email"] {
     background-color: var(--dark-cerulean);
@@ -117,6 +116,10 @@ const FieldUpper = styled.div`
     padding: 0 20px;
     border: 0;
     width: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    input[type="text"] {
+    }
   }
 `;
 
