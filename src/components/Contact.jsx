@@ -57,6 +57,18 @@ const Title = styled.h1`
       left: -5px;
     }
   }
+
+  @media screen and (max-width: 380px) {
+    font-size: 3rem;
+    &:before {
+      top: -10px;
+      left: -15px;
+    }
+    &:after {
+      top: 30px;
+      left: 10px;
+    }
+  }
 `;
 
 const Container = styled.div`
@@ -69,6 +81,10 @@ const Container = styled.div`
     flex-direction: column;
     padding: 0 10px;
     justify-content: flex-start;
+  }
+
+  @media screen and (max-width: 600px) {
+    gap: 10px;
   }
 `;
 
@@ -101,12 +117,20 @@ const Form = styled.form`
       margin-top: 20px;
     }
   }
+  @media screen and (max-width: 600px) {
+    input[type="submit"] {
+      margin-top: 5px;
+    }
+  }
 `;
 
 const FieldHalf = styled.div`
   display: flex;
   gap: 0.5rem;
   margin-bottom: 10px;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 5px;
+  }
 `;
 
 const FieldUpper = styled.div`
@@ -151,6 +175,9 @@ const Field = styled.div`
     padding: 20px;
     resize: none;
   }
+  @media screen and (max-width: 380px) {
+    margin-bottom: 5px;
+  }
 `;
 
 const ParagraphContainer = styled.div`
@@ -181,6 +208,9 @@ const Thanks = styled.p`
   margin-top: auto;
   color: var(--light-yellow);
   text-align: center;
+  @media screen and (max-width: 380px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const Contact = () => {
