@@ -13,6 +13,9 @@ const PortfolioPage = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  @media screen and (max-width: 600px) {
+    gap: 30px;
+  }
 `;
 
 const Title = styled.h1`
@@ -49,14 +52,15 @@ const Title = styled.h1`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-bottom: 0;
     &:before {
-      top: -20px;
-      left: -20px;
+      top: -40px;
+      left: 10px;
     }
     &:after {
       top: 45px;
+      left: -5px;
     }
   }
 `;
@@ -69,6 +73,7 @@ const Slider = styled.div`
   @media screen and (max-width: 600px) {
     flex-direction: column;
     width: auto;
+    gap: 20px;
   }
 `;
 
