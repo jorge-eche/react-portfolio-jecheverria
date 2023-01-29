@@ -41,6 +41,10 @@ const Title = styled.h1`
     left: 30px;
   }
 
+  @media screen and (max-width: 1300px) {
+    font-size: 4rem;
+  }
+
   @media screen and (max-width: 600px) {
     flex-basis: 15%;
     display: flex;
@@ -77,6 +81,11 @@ const Container = styled.div`
   justify-content: space-around;
   padding: 40px;
   gap: 30px;
+
+  @media screen and (max-width: 1300px) {
+    padding: 0 40px 0;
+  }
+
   @media screen and (max-width: 600px) {
     flex-direction: column;
     padding: 0 10px;

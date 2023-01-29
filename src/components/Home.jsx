@@ -52,6 +52,10 @@ const Title = styled.h1`
 
   @media screen and (max-width: 1300px) {
     font-size: 4rem;
+    span:nth-child(2):after {
+      top: 7.3em;
+      left: -4.6em;
+    }
   }
 
   @media screen and (max-width: 600px) {
