@@ -6,6 +6,8 @@ const ContactPage = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 600px) {
+    gap: 30px;
 `;
 
 const Title = styled.h1`
@@ -43,14 +45,15 @@ const Title = styled.h1`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-bottom: 0;
     &:before {
-      top: -20px;
-      left: -20px;
+      top: -35px;
+      left: 4px;
     }
     &:after {
       top: 45px;
+      left: -5px;
     }
   }
 `;
