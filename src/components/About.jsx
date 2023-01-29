@@ -38,6 +38,11 @@ const Title = styled.h1`
     top: 20px;
     left: 30px;
   }
+
+  @media screen and (max-width: 1300px) {
+    font-size: 4rem;
+  }
+
   @media screen and (max-width: 600px) {
     flex-basis: 15%;
     display: flex;
@@ -91,6 +96,10 @@ const Paragraph = styled.p`
   font-family: sans-serif;
   line-height: 2rem;
   margin-bottom: 20px;
+  @media screen and (max-width: 1300px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
   @media screen and (max-width: 600px) {
     font-size: 0.9rem;
     line-height: 1.3rem;
@@ -122,6 +131,10 @@ const ContainerPhoto = styled.div`
 
 const Photo = styled.img`
   border-radius: 50%;
+  @media screen and (max-width: 1300px) {
+    width: 10rem;
+    height: 10rem;
+  }
   @media screen and (max-width: 600px) {
     width: 5rem;
     height: 5rem;
