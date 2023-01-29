@@ -48,6 +48,10 @@ const Title = styled.h1`
     left: 30px;
   }
 
+  @media screen and (max-width: 1300px) {
+    font-size: 4rem;
+  }
+
   @media screen and (max-width: 600px) {
     flex-basis: 15%;
     display: flex;
@@ -83,6 +87,10 @@ const Slider = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 1500px;
+
+  @media screen and (max-width: 1300px) {
+    width: initial;
+  }
   @media screen and (max-width: 600px) {
     flex-direction: column;
     width: auto;
@@ -146,6 +154,11 @@ const ProjectImage = styled.img`
   margin-bottom: 30px;
   box-shadow: 1em 1em 2em #000;
   border-radius: 10px;
+
+  @media screen and (max-width: 1300px) {
+    width: 375px;
+    height: 170px;
+  }
   @media screen and (max-width: 600px) {
     width: 350px;
     height: 175px;
@@ -163,6 +176,10 @@ const ProjectTitle = styled.h1`
     background-color: var(--light-yellow);
     margin: 10px auto 0 auto;
   }
+
+  @media screen and (max-width: 1300px) {
+    font-size: 1.5rem;
+  }
   @media screen and (max-width: 600px) {
     font-size: 1.5rem;
   }
@@ -171,6 +188,9 @@ const ProjectTitle = styled.h1`
 const Description = styled.h2`
   font-weight: 400;
   margin-bottom: 15px;
+  @media screen and (max-width: 1300px) {
+    font-size: 1.1rem;
+  }
   @media screen and (max-width: 600px) {
     font-size: 1.1rem;
     text-align: center;
@@ -180,6 +200,9 @@ const Description = styled.h2`
 
 const Techs = styled.h3`
   opacity: 0.8;
+  @media screen and (max-width: 1300px) {
+    font-size: 0.9rem;
+  }
   @media screen and (max-width: 600px) {
     padding: 0 10px;
     font-size: 0.9rem;
