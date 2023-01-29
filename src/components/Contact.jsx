@@ -8,6 +8,7 @@ const ContactPage = styled.div`
   flex-direction: column;
   @media screen and (max-width: 600px) {
     gap: 30px;
+  }
 `;
 
 const Title = styled.h1`

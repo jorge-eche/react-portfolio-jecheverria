@@ -47,6 +47,7 @@ const Title = styled.h1`
     top: 20px;
     left: 30px;
   }
+
   @media screen and (max-width: 600px) {
     flex-basis: 15%;
     display: flex;
@@ -63,6 +64,18 @@ const Title = styled.h1`
       left: -5px;
     }
   }
+
+  @media screen and (max-width: 380px) {
+    font-size: 2rem;
+    &:before {
+      top: -15px;
+      left: -15px;
+    }
+    &:after {
+      top: 30px;
+      left: 10px;
+    }
+  }
 `;
 
 const Slider = styled.div`
@@ -75,6 +88,10 @@ const Slider = styled.div`
     width: auto;
     gap: 20px;
   }
+
+  @media screen and (max-width: 380px) {
+    gap: 10px;
+  }
 `;
 
 const ContainerArrowsMobile = styled.div`
@@ -83,6 +100,9 @@ const ContainerArrowsMobile = styled.div`
     display: flex;
     justify-content: space-evenly;
     margin-top: 30px;
+  }
+  @media screen and (max-width: 380px) {
+    margin-top: 0;
   }
 `;
 
