@@ -54,6 +54,14 @@ const Title = styled.h1`
       left: 10px;
     }
   }
+
+  @media screen and (max-width: 380px) {
+    font-size: 3rem;
+    &:after {
+      top: 30px;
+      left: 10px;
+    }
+  }
 `;
 
 const ContainerFlex = styled.div`
@@ -88,10 +96,18 @@ const Paragraph = styled.p`
     line-height: 1.3rem;
     margin-bottom: 10px;
   }
+  @media screen and (max-width: 380px) {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    margin-bottom: 5px;
+  }
 `;
 
 const ContainerPhotoResume = styled.div`
   margin-top: 25px;
+  @media screen and (max-width: 380px) {
+    margin-top: 10px;
+  }
 `;
 
 const ContainerPhoto = styled.div`
