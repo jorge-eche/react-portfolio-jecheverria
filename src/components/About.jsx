@@ -43,14 +43,15 @@ const Title = styled.h1`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-bottom: 0;
     &:before {
       top: -20px;
-      left: -20px;
+      left: 0;
     }
     &:after {
       top: 45px;
+      left: 10px;
     }
   }
 `;

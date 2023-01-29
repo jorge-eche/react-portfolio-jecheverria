@@ -147,7 +147,6 @@ const Field = styled.div`
     padding: 20px;
     resize: none;
   }
-  }
 `;
 
 const ParagraphContainer = styled.div`
@@ -268,11 +267,6 @@ const Contact = () => {
             If you have a project that you would like to discuss or have any
             questions about my work, please don't hesitate to contact me.
           </Paragraph>
-
-          {/* <Paragraph>
-            You can also find me on social media or the contact info left on my
-            resume.
-          </Paragraph> */}
           <Paragraph>
             I look forward to hearing from you and working together on your next
             project.
