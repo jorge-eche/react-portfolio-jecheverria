@@ -324,15 +324,6 @@ const Sidebar = ({
           </ListItem>
 
           <ListItem>
-            <a
-              href="https://wa.me/610468864448?text=Hi%20Jorge%20,%20I'm%20interested%20in%20your%20portfolio"
-              target="_blank"
-            >
-              <StyledFontAwesomeIcon icon={faWhatsapp} />
-            </a>
-          </ListItem>
-
-          <ListItem>
             <a href="https://twitter.com/CokoEche" target="_blank">
               <StyledFontAwesomeIcon icon={faTwitter} />
             </a>

@@ -48,7 +48,7 @@ const Title = styled.h1`
     left: 30px;
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     font-size: 4rem;
   }
 
@@ -88,7 +88,7 @@ const Slider = styled.div`
   align-items: center;
   width: 1500px;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     width: initial;
   }
   @media screen and (max-width: 600px) {
@@ -155,7 +155,7 @@ const ProjectImage = styled.img`
   box-shadow: 1em 1em 2em #000;
   border-radius: 10px;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     width: 375px;
     height: 170px;
   }
@@ -177,7 +177,7 @@ const ProjectTitle = styled.h1`
     margin: 10px auto 0 auto;
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     font-size: 1.5rem;
   }
   @media screen and (max-width: 600px) {
@@ -186,9 +186,10 @@ const ProjectTitle = styled.h1`
 `;
 
 const Description = styled.h2`
+  font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 15px;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     font-size: 1.1rem;
   }
   @media screen and (max-width: 600px) {
@@ -200,7 +201,7 @@ const Description = styled.h2`
 
 const Techs = styled.h3`
   opacity: 0.8;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     font-size: 0.9rem;
   }
   @media screen and (max-width: 600px) {

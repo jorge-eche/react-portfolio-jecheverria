@@ -41,7 +41,7 @@ const Title = styled.h1`
     left: 30px;
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     font-size: 4rem;
   }
 
@@ -82,7 +82,7 @@ const Container = styled.div`
   padding: 40px;
   gap: 30px;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     padding: 0 40px 0;
   }
 
@@ -119,14 +119,17 @@ const Form = styled.form`
       background-color: var(--light-yellow);
     }
   }
+
   @media screen and (max-width: 600px) {
     order: 2;
+    margin-top: 30px;
     input[type="submit"] {
       align-self: center;
       margin-top: 20px;
     }
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 380px) {
+    margin-top: 0;
     input[type="submit"] {
       margin-top: 5px;
     }
@@ -187,6 +190,9 @@ const Field = styled.div`
   @media screen and (max-width: 380px) {
     margin-bottom: 5px;
   }
+  @media screen and (max-width: 600px) {
+    margin-bottom: 5px;
+  }
 `;
 
 const ParagraphContainer = styled.div`
@@ -217,8 +223,13 @@ const Thanks = styled.p`
   margin-top: auto;
   color: var(--light-yellow);
   text-align: center;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 20px;
+  }
   @media screen and (max-width: 380px) {
     font-size: 1.4rem;
+    margin-top: 0;
   }
 `;
 

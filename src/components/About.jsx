@@ -39,7 +39,7 @@ const Title = styled.h1`
     left: 30px;
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     font-size: 4rem;
   }
 
@@ -71,20 +71,26 @@ const Title = styled.h1`
 
 const ContainerFlex = styled.div`
   height: 100%;
+  padding: 0 40px 0;
   margin-top: 15px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   @media screen and (max-width: 600px) {
     display: block;
+    padding: 0 16px 0;
   }
 `;
 
 const ContainerP = styled.div`
-  flex-basis: 60%;
+  flex-basis: 65%;
+
+  @media screen and (max-width: 1500px) {
+    flex-basis: 70%;
+  }
   @media screen and (max-width: 600px) {
     flex-basis: initial;
-    padding: 0 1rem 0;
+    margin-bottom: 20px;
   }
 `;
 
@@ -96,12 +102,12 @@ const Paragraph = styled.p`
   font-family: sans-serif;
   line-height: 2rem;
   margin-bottom: 20px;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     font-size: 1rem;
     line-height: 1.5rem;
   }
   @media screen and (max-width: 600px) {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.3rem;
     margin-bottom: 10px;
   }
@@ -112,59 +118,20 @@ const Paragraph = styled.p`
   }
 `;
 
-const ContainerPhotoResume = styled.div`
-  margin-top: 25px;
-  @media screen and (max-width: 380px) {
-    margin-top: 10px;
-  }
-`;
-
 const ContainerPhoto = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
-  @media screen and (max-width: 600px) {
-    margin-bottom: 16px;
-  }
 `;
 
 const Photo = styled.img`
+  width: 400px;
   border-radius: 50%;
-  @media screen and (max-width: 1300px) {
-    width: 10rem;
-    height: 10rem;
+  @media screen and (max-width: 1500px) {
+    width: 300px;
   }
   @media screen and (max-width: 600px) {
-    width: 5rem;
-    height: 5rem;
-  }
-`;
-
-const ResumeContainer = styled.a`
-  display: block;
-  text-align: center;
-`;
-
-const Resume = styled.button`
-  margin-top: 20px;
-  opacity: 0.9;
-  color: var(--light-yellow);
-  background-color: var(--aqua);
-  padding: 10px 18px;
-  text-transform: uppercase;
-  font-family: sans-serif;
-  letter-spacing: 0.5rem;
-  text-align: center;
-  border: 1px solid var(--light-yellow);
-  border-radius: 4px;
-  &:hover {
-    cursor: pointer;
-    color: var(--dark-blue);
-    background-color: var(--light-yellow);
-  }
-  @media screen and (max-width: 600px) {
-    margin-top: 0;
+    width: 130px;
   }
 `;
 
@@ -198,17 +165,14 @@ const About = () => {
             fanatic and above all web development obssesed !!!
           </Paragraph>
         </ContainerP>
-        <ContainerPhotoResume>
+        <ContainerPhoto>
           {" "}
-          <ContainerPhoto>
-            {" "}
-            <Photo src={JorgePic} alt="My Picture" />
-          </ContainerPhoto>
-          <ResumeContainer href="">
+          <Photo src={JorgePic} alt="My Picture" />
+        </ContainerPhoto>
+        {/* <ResumeContainer href="">
             {" "}
             <Resume>My Resume</Resume>
-          </ResumeContainer>
-        </ContainerPhotoResume>
+          </ResumeContainer> */}
       </ContainerFlex>
     </AboutPage>
   );
