@@ -91,6 +91,7 @@ const Slider = styled.div`
   @media screen and (max-width: 1500px) {
     width: initial;
   }
+
   @media screen and (max-width: 600px) {
     flex-direction: column;
     width: auto;
@@ -142,6 +143,9 @@ const ProjectContainer = styled.div`
   align-items: center;
   width: 900px;
   height: 400px;
+  @media screen and (max-width: 1500px) {
+    height: auto;
+  }
   @media screen and (max-width: 600px) {
     width: auto;
     height: auto;
@@ -158,6 +162,7 @@ const ProjectImage = styled.img`
   @media screen and (max-width: 1500px) {
     width: 375px;
     height: 170px;
+    margin-bottom: 20px;
   }
   @media screen and (max-width: 600px) {
     width: 350px;
@@ -178,7 +183,7 @@ const ProjectTitle = styled.h1`
   }
 
   @media screen and (max-width: 1500px) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   @media screen and (max-width: 600px) {
     font-size: 1.5rem;
@@ -190,7 +195,8 @@ const Description = styled.h2`
   font-weight: 400;
   margin-bottom: 15px;
   @media screen and (max-width: 1500px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 5px;
   }
   @media screen and (max-width: 600px) {
     font-size: 1.1rem;
@@ -202,7 +208,7 @@ const Description = styled.h2`
 const Techs = styled.h3`
   opacity: 0.8;
   @media screen and (max-width: 1500px) {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
   @media screen and (max-width: 600px) {
     padding: 0 10px;
@@ -216,6 +222,9 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-around;
   text-align: center;
+  @media screen and (max-width: 1500px) {
+    margin-top: 10px;
+  }
 `;
 
 const Link = styled.a`
@@ -223,6 +232,7 @@ const Link = styled.a`
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  margin-top: 20px;
   width: 180px;
   opacity: 0.9;
   color: var(--light-yellow);
@@ -238,6 +248,11 @@ const Link = styled.a`
     cursor: pointer;
     color: var(--dark-blue);
     background-color: var(--light-yellow);
+  }
+
+  @media screen and (max-width: 1500px) {
+    margin: 0;
+    font-size: 0.8rem;
   }
 `;
 
