@@ -48,7 +48,7 @@ const Title = styled.h1`
     left: 30px;
   }
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     font-size: 4rem;
   }
 
@@ -88,7 +88,7 @@ const Slider = styled.div`
   align-items: center;
   width: 1500px;
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     width: initial;
   }
 
@@ -111,7 +111,7 @@ const ContainerArrowsMobile = styled.div`
     margin-top: 30px;
   }
   @media screen and (max-width: 380px) {
-    margin-top: 0;
+    margin-top: 10px;
   }
 `;
 
@@ -143,7 +143,7 @@ const ProjectContainer = styled.div`
   align-items: center;
   width: 900px;
   height: 400px;
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     height: auto;
   }
   @media screen and (max-width: 600px) {
@@ -159,7 +159,7 @@ const ProjectImage = styled.img`
   box-shadow: 1em 1em 2em #000;
   border-radius: 10px;
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     width: 375px;
     height: 170px;
     margin-bottom: 20px;
@@ -182,11 +182,14 @@ const ProjectTitle = styled.h1`
     margin: 10px auto 0 auto;
   }
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     font-size: 1.3rem;
   }
   @media screen and (max-width: 600px) {
     font-size: 1.5rem;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 1.3rem;
   }
 `;
 
@@ -194,7 +197,7 @@ const Description = styled.h2`
   font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 15px;
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     font-size: 1rem;
     margin-bottom: 5px;
   }
@@ -203,17 +206,23 @@ const Description = styled.h2`
     text-align: center;
     padding: 0 10px;
   }
+  @media screen and (max-width: 380px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const Techs = styled.h3`
   opacity: 0.8;
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     font-size: 0.7rem;
   }
   @media screen and (max-width: 600px) {
     padding: 0 10px;
     font-size: 0.9rem;
     text-align: center;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 0.7rem;
   }
 `;
 
@@ -222,7 +231,7 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-around;
   text-align: center;
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     margin-top: 10px;
   }
 `;
@@ -250,7 +259,11 @@ const Link = styled.a`
     background-color: var(--light-yellow);
   }
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  @media screen and (max-width: 380px) {
     margin: 0;
     font-size: 0.8rem;
   }
