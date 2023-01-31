@@ -39,7 +39,7 @@ const Title = styled.h1`
     left: 30px;
   }
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     font-size: 4rem;
   }
 
@@ -85,7 +85,7 @@ const ContainerFlex = styled.div`
 const ContainerP = styled.div`
   flex-basis: 65%;
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     flex-basis: 70%;
   }
   @media screen and (max-width: 600px) {
@@ -102,7 +102,7 @@ const Paragraph = styled.p`
   font-family: sans-serif;
   line-height: 2rem;
   margin-bottom: 20px;
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -127,7 +127,7 @@ const ContainerPhoto = styled.div`
 const Photo = styled.img`
   width: 400px;
   border-radius: 50%;
-  @media screen and (max-width: 1500px) {
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
     width: 300px;
   }
   @media screen and (max-width: 600px) {
@@ -162,7 +162,7 @@ const About = () => {
           <Paragraph>
             If I had to define myself in just a few words I would say I am a
             disciplined, curious and hard-working individual, avid reader, gym
-            fanatic and above all web development obssesed !!!
+            fanatic and above all web development obsessed !!!
           </Paragraph>
         </ContainerP>
         <ContainerPhoto>
