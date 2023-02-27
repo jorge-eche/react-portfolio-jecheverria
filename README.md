@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# My Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my Portfolio. I built this project to showcase my web development projects and introduce myself to possible employers.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The project - Features](#the-project)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+  - [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [If I had more time I would change this](#if-i-had-more-time-i-would-change-this)
+  - [Continued development](#continued-development)
+  - [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- Contact me via the form on 'My Portfolio' section of the page. This will redirect the message to my personal Gmail account.
+- See my projects and slide left and right to switch to the previous / next work.
+- See the project you are interested 'live' or inspect its source code on GitHub.
+- Show you in what section of the website you are in, by highlighting the corresponding button.
+- Visit my different social media profiles (LinkdIn, GitHub and Twitter).
+- View the optimal layout depending on their device's screen size.
+- See hover states for interactive elements.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![Screenshot of the project](./public/portfolio/portfolio-screenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Live Site URL: https://jorgeecheverria.netlify.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Create React App - React environment
+- Semantic HTML5 markup
+- Flexbox
+- Desktop-first workflow
+- [EmailJS)(https://www.emailjs.com/) - For the Contact Form API
+- [Styled Components](https://styled-components.com/) - For styles
+- [React](https://reactjs.org/) - JS library
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+On this project I learned how powerful Styled Components can be. You can basically forget about the class names and making the vanilla CSS a mess. Styled Components lets you relax and put all the energy on the design, forgetting about the tricky nature of CSS class names when building a big-enough website.
+On the other hand though, and to my surprise, Styled Components also has its tricky nature too, as the HTLM part of the jsx files can get a bit confusing with all the Styled Components components you built and sometimes you have to remind yourself what kind of tag this or that component had, which can also be annoying.
+EmailJS is a REST API that made my life easier when creating the contact form. It resends the message sent by the client onto my Gmail account. After some initial set up it started to work wonderfully and best of all: for free!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### If I had more time I would change this
 
-## Learn More
+Definitely, the first thing I will add to my future portfolio is page routing, be it React Router or Next.js. I was learning React Router by the time my portfolio was almost finished and I was super excited to start looking for a job, so I decided to leave it as it was in order to start the job search. Nonetheless, I will only find peace of mind after I add this feature to my next portfolio.
+I would also like my Styled Components to be a little bit more organized. Maybe, for example, 'extending' components so to achieve a shortening of the CSS code.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Continued development
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I am very happy this project let me explore Styled Components and in the next one I have the choice of either try something different like Tailwind or deepen my Styled Componens' current knowledge, in order to achieve a better-looking design code.
+At the momento, I am building a fullstack MERN application. Even though I am not aiming to work in the backend, it will let me study Node.js, Express.js and PostgreSQL, so I have some exposure to the server side of the equation.
+Afterwards, I will come back full-on to my frontend development studies and I think Testing and TypeScript are a must!
 
-### Code Splitting
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Twitter - [@CokoEche](https://twitter.com/CokoEche)
+- LinkedIn - [@jorgeecheverria-dev] (https://www.linkedin.com/in/jorgeecheverria-dev/)
