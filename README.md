@@ -41,7 +41,7 @@ Users should be able to:
 
 ### Built with
 
-- Create React App - React environment
+- [Create React App](https://create-react-app.dev/) - React environment
 - Semantic HTML5 markup
 - Flexbox
 - Desktop-first workflow
