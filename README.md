@@ -45,7 +45,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - Flexbox
 - Desktop-first workflow
-- [EmailJS)(https://www.emailjs.com/) - For the Contact Form API
+- [EmailJS](https://www.emailjs.com/) - For the Contact Form API
 - [Styled Components](https://styled-components.com/) - For styles
 - [React](https://reactjs.org/) - JS library
 
