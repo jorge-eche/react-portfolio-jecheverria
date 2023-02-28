@@ -51,19 +51,20 @@ Users should be able to:
 
 ### What I learned
 
-On this project I learned how powerful Styled Components can be. You can basically forget about the class names and making the vanilla CSS a mess. Styled Components lets you relax and put all the energy on the design, forgetting about the tricky nature of CSS class names when building a big-enough website.
-On the other hand though, and to my surprise, Styled Components also has its tricky nature too, as the HTLM part of the jsx files can get a bit confusing with all the Styled Components components you built and sometimes you have to remind yourself what kind of tag this or that component had, which can also be annoying.
-EmailJS is a REST API that made my life easier when creating the contact form. It resends the message sent by the client onto my Gmail account. After some initial set up it started to work wonderfully and best of all: for free!
+- On this project I learned how powerful Styled Components can be. You can basically forget about the class names and making the vanilla CSS a mess. Styled Components lets you relax and put all the energy on the design, forgetting about the tricky nature of CSS class names when building a big-enough website.
+- On the other hand though, and to my surprise, Styled Components also has its tricky nature too, as the HTLM part of the jsx files can get a bit confusing with all the Styled Components components you built and sometimes you have to remind yourself what kind of tag this or that component had, which can also be annoying.
+- REST API are one of the most useful tools when building websites. EmailJS is a REST API that made my life easier when creating the contact form. It sends the information completed by the client in the form onto my Gmail account. After some initial set up it started to work wonderfully and best of all: for free!
 
 ### If I had more time I would change this
 
-Definitely, the first thing I will add to my future portfolio is page routing, be it React Router or Next.js. I was learning React Router by the time my portfolio was almost finished and I was super excited to start looking for a job, so I decided to leave it as it was in order to start the job search. Nonetheless, I will only find peace of mind after I add this feature to my next portfolio.
-I would also like my Styled Components to be a little bit more organized. Maybe, for example, 'extending' components so to achieve a shortening of the CSS code.
+- Definitely, the first thing I will add to my future portfolio is page routing, be it React Router or Next.js. I was learning React Router by the time my portfolio was almost finished and I was super excited to start looking for a job, so I decided to leave it as it was in order to start the job search. Nonetheless, I will only find peace of mind after I add this feature to my next portfolio.
+- I would also like my Styled Components to be a little bit more organized. Maybe, for example, 'extending' components so to achieve a shortening of the CSS code.
+- Testing, testing and more testing.
 
 ### Continued development
 
 I am very happy this project let me explore Styled Components and in the next one I have the choice of either try something different like Tailwind or deepen my Styled Componens' current knowledge, in order to achieve a better-looking design code.
-At the momento, I am building a fullstack MERN application. Even though I am not aiming to work in the backend, it will let me study Node.js, Express.js and PostgreSQL, so I have some exposure to the server side of the equation.
+At the moment, I am building a fullstack MERN application. Even though I am not aiming to work in the backend, it will give me well-needed exposure to Node.js, Express.js and PostgreSQL.
 Afterwards, I will come back full-on to my frontend development studies and I think Testing and TypeScript are a must!
 
 ## Author
