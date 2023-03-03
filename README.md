@@ -43,6 +43,7 @@ Users should be able to:
 
 - [React](https://reactjs.org/) - JS library
 - [Create React App](https://create-react-app.dev/) - React environment
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Language
 - [Styled Components](https://styled-components.com/) - For styles
 - [EmailJS](https://www.emailjs.com/) - For the Contact Form API
 - [Semantic HTML5 markup](https://www.w3.org/html/) - For the web structure
