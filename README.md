@@ -41,13 +41,13 @@ Users should be able to:
 
 ### Built with
 
+- [React](https://reactjs.org/) - JS library
 - [Create React App](https://create-react-app.dev/) - React environment
-- Semantic HTML5 markup
+- [Styled Components](https://styled-components.com/) - For styles
+- [EmailJS](https://www.emailjs.com/) - For the Contact Form API
+- [Semantic HTML5 markup](https://www.w3.org/html/) - For the web structure
 - Flexbox
 - Desktop-first workflow
-- [EmailJS](https://www.emailjs.com/) - For the Contact Form API
-- [Styled Components](https://styled-components.com/) - For styles
-- [React](https://reactjs.org/) - JS library
 
 ### What I learned
 
