@@ -4,7 +4,7 @@
     "image": "/portfolio/crowdfunding-screenshot.png",
     "title": "Crowdfunding Product Page",
     "description": "React app that emulates a crowdfunding website and allows visitors to make pledges",
-    "techs": "Developed with React, Vite, Javascript, HTML5 and CSS3",
+    "techs": "Developed with React, Vite, JavaScript, HTML5 & CSS3",
     "url": "https://crowdfunding-project-page.netlify.app",
     "code": "https://github.com/jorge-eche/crowdfunding-product-page"
   },
@@ -13,7 +13,7 @@
     "image": "/portfolio/portfolio-screenshot.png",
     "title": "Portfolio Website",
     "description": "My personal portfolio created to showcase my work and side projects",
-    "techs": "Developed with React, CRA, Javascript, Styled Components, EmailJS (REST API), Tobias Ahlin Spinkit, HTML5 and CSS3",
+    "techs": "Developed with React, CRA, JavaScript, Styled Components, EmailJS (REST API), Tobias Ahlin Spinkit, HTML5 & CSS3",
     "url": "https://jorgeecheverria.netlify.app",
     "code": "https://github.com/jorge-eche/react-portfolio-jecheverria"
   },
@@ -22,7 +22,7 @@
     "image": "/portfolio/crypto-screenshot.png",
     "title": "Cryptocurrency Price Comparison Application",
     "description": "Compares the price of different currencies with the 10 most important cryptos with the help of a RESTful API.",
-    "techs": "Developed with React (custom Hooks), Vite, Javascript, HTML5, Cryptocompare (REST API), Styled Components and HTML5",
+    "techs": "Developed with React (custom Hooks), Vite, JavaScript, HTML5, Cryptocompare (REST API), Styled Components & HTML5",
     "url": "https://cryptos-tracker-react.netlify.app",
     "code": "https://github.com/jorge-eche/crypto-react"
   },
@@ -32,7 +32,7 @@
     "image": "/portfolio/expense-tracker-screenshot.png",
     "title": "Expense Tracker App",
     "description": "Application that helps users track their spending by allowing them to create a budget and input/categorize their expenses.",
-    "techs": "Developed with React, Vite",
+    "techs": "Developed with React, Vite, JavaScript, React Swipeable List, HTML5 & CSS3.",
     "url": "https://expenses-tracker-jee.netlify.app",
     "code": "https://github.com/jorge-eche/expense-tracker"
   }
