@@ -118,6 +118,24 @@ const Paragraph = styled.p`
   }
 `;
 
+const UlTech = styled.ul`
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  li {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  @media screen and (min-width: 601px) and (max-width: 1500px) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1.1rem;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 0.8rem;
+  }
+`;
+
 const ContainerPhoto = styled.div`
   display: flex;
   align-items: center;
@@ -151,19 +169,23 @@ const About = () => {
             diverse projects .
           </Paragraph>
           <Paragraph>
-            Before transitioning into tech, I spent several years studying law
-            and learned the importance of attention to detail and the ability to
-            think critically under pressure. On the other hand, maintaining
-            physical fitness through weight lifting at the gym not only helps me
-            to stay healthy and energized, but it also improves my mental
-            clarity and focus. These skills have proven to be invaluable in my
-            current career as a developer .
+            I discovered my passion for programming after many fellow
+            programmers insisted that my personality matched 100% with this
+            profession so I decided to give it a try and the rest is History: I
+            fell in love with coding, the possibility it gives me to unleash my
+            creativity and logical abilities and its amazing capacity to solve
+            real human being's problems and needs.
           </Paragraph>
           <Paragraph>
-            If I had to define myself in just a few words I would say I am a
-            disciplined, curious and hard-working individual, avid reader, gym
-            fanatic and above all web development obsessed !!!
+            You are more than welcomed to check some of my work in the next
+            section. These are some technologies I've been working with:
           </Paragraph>
+          <UlTech>
+            <li>⚙️React</li>
+            <li>⚙️JavaScript, HTML5 & CSS3</li>
+            <li>⚙️Node.js</li>
+            <li>⚙️PostgreSQL</li>
+          </UlTech>
         </ContainerP>
         <ContainerPhoto>
           {" "}
