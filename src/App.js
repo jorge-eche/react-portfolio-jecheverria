@@ -3,7 +3,6 @@ import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Layout from "./components/Layout";
 
-import "./App.css";
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 

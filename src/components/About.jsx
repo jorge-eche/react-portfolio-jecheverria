@@ -124,6 +124,7 @@ const UlTech = styled.ul`
   li {
     display: inline-block;
     margin-right: 5px;
+    color: var(--light-yellow);
   }
   @media screen and (min-width: 601px) and (max-width: 1500px) {
     font-size: 1rem;
@@ -182,7 +183,9 @@ const About = () => {
           </Paragraph>
           <UlTech>
             <li>⚙️React</li>
-            <li>⚙️JavaScript, HTML5 & CSS3</li>
+            <li>⚙️JavaScript</li>
+            <li>⚙️HTML5</li>
+            <li>⚙️CSS3</li>
             <li>⚙️Node.js</li>
             <li>⚙️PostgreSQL</li>
           </UlTech>
