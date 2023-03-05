@@ -171,11 +171,11 @@ const About = () => {
           </Paragraph>
           <Paragraph>
             I discovered my passion for programming after many fellow
-            programmers insisted that my personality matched 100% with this
+            programmers insisted that my personality would 100% suit this
             profession so I decided to give it a try and the rest is History: I
-            fell in love with coding, the possibility it gives me to unleash my
-            creativity and logical abilities and its amazing capacity to solve
-            real human being's problems and needs.
+            fell in love with coding and the possibility it gives me to unleash
+            my creativity and logical abilities; also its amazing capacity to
+            solve real human being's problems and needs.
           </Paragraph>
           <Paragraph>
             You are more than welcomed to check some of my work in the next
