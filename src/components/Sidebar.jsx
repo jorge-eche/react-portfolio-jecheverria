@@ -227,6 +227,9 @@ const BurgerIcon = styled(FontAwesomeIcon)`
   display: none;
   @media screen and (max-width: 600px) {
     display: initial;
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 
