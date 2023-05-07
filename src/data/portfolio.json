@@ -1,6 +1,15 @@
 [
   {
     "id": "1",
+    "image": "/portfolio/facedetection-screenshot.png",
+    "title": "Smart Brain",
+    "description": "Fullstack PERN app that recognizes faces on images uploaded by the user.",
+    "techs": "Developed with React, Node.js, Express.js, PostgreSQL, gRPC API, JavaScript, HTML5 & CSS3",
+    "url": "https://smartbrain-edxx.onrender.com/",
+    "code": "https://github.com/jorge-eche/face-detection-app"
+  },
+  {
+    "id": "2",
     "image": "/portfolio/crowdfunding-screenshot.png",
     "title": "Crowdfunding Product Page",
     "description": "React app that emulates a crowdfunding website and allows visitors to make pledges",
@@ -9,7 +18,7 @@
     "code": "https://github.com/jorge-eche/crowdfunding-product-page"
   },
   {
-    "id": "2",
+    "id": "3",
     "image": "/portfolio/portfolio-screenshot.png",
     "title": "Portfolio Website",
     "description": "My personal portfolio created to showcase my work and side projects",
@@ -18,7 +27,7 @@
     "code": "https://github.com/jorge-eche/react-portfolio-jecheverria"
   },
   {
-    "id": "3",
+    "id": "4",
     "image": "/portfolio/crypto-screenshot.png",
     "title": "Cryptocurrency Price Comparison Application",
     "description": "Compares the price of different currencies with the 10 most important cryptos with the help of a RESTful API.",
@@ -28,7 +37,7 @@
   },
 
   {
-    "id": "4",
+    "id": "5",
     "image": "/portfolio/expense-tracker-screenshot.png",
     "title": "Expense Tracker App",
     "description": "Application that helps users track their spending by allowing them to create a budget and input/categorize their expenses.",

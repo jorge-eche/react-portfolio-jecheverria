@@ -187,6 +187,7 @@ const About = () => {
             <li>⚙️HTML5</li>
             <li>⚙️CSS3</li>
             <li>⚙️Node.js</li>
+            <li>Express.js</li>
             <li>⚙️PostgreSQL</li>
           </UlTech>
         </ContainerP>
