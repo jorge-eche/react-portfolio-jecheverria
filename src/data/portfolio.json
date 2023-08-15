@@ -10,6 +10,14 @@
   },
   {
     "id": "2",
+    "image": "/portfolio/reactmeals-screenshot.png",
+    "title": "React Meals",
+    "description": "Food app for online ordering that includes a cart.",
+    "techs": "Developed with React, Context API, useReducer, Create React App, JavaScript, HTML5 & CSS3",
+    "url": "https://reactdummymeals.netlify.app/",
+    "code": "https://github.com/jorge-eche/react-meals"
+  },
+      "id": "3",
     "image": "/portfolio/crowdfunding-screenshot.png",
     "title": "Crowdfunding Product Page",
     "description": "React app that emulates a crowdfunding website and allows visitors to make pledges",
@@ -18,7 +26,7 @@
     "code": "https://github.com/jorge-eche/crowdfunding-product-page"
   },
   {
-    "id": "3",
+    "id": "4",
     "image": "/portfolio/portfolio-screenshot.png",
     "title": "Portfolio Website",
     "description": "My personal portfolio created to showcase my work and side projects",
@@ -27,7 +35,7 @@
     "code": "https://github.com/jorge-eche/react-portfolio-jecheverria"
   },
   {
-    "id": "4",
+    "id": "5",
     "image": "/portfolio/crypto-screenshot.png",
     "title": "Cryptocurrency Price Comparison Application",
     "description": "Compares the price of different currencies with the 10 most important cryptos with the help of a RESTful API.",
@@ -37,7 +45,7 @@
   },
 
   {
-    "id": "5",
+    "id": "6",
     "image": "/portfolio/expense-tracker-screenshot.png",
     "title": "Expense Tracker App",
     "description": "Application that helps users track their spending by allowing them to create a budget and input/categorize their expenses.",
