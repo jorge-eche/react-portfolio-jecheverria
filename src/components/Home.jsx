@@ -157,16 +157,7 @@ const ContactButton = styled.button`
   }
 `;
 
-const Home = ({ setIsActive }) => {
-  const handleClick = () => {
-    setIsActive({
-      home: false,
-      about: false,
-      porfolio: false,
-      contact: true,
-    });
-  };
-
+const Home = ({ routeHandler }) => {
   return (
     <HomePage>
       <Title>
@@ -174,7 +165,9 @@ const Home = ({ setIsActive }) => {
         <br /> My name is <span>Jorge Echeverría</span> <br />
         I'm a <TypedOut></TypedOut>
       </Title>
-      <ContactButton onClick={handleClick}>Contact Me</ContactButton>
+      <ContactButton onClick={() => routeHandler("contact")}>
+        Contact Me
+      </ContactButton>
     </HomePage>
   );
 };

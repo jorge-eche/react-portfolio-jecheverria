@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Sidebar from "./components/Sidebar";
 import Layout from "./components/Layout";
+import "./App.css";
 
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
+
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -47,26 +50,58 @@ const Page = styled.div`
 `;
 
 function App() {
-  const [isActive, setIsActive] = useState({
-    home: true,
-    about: false,
-    portfolio: false,
-    contact: false,
-  });
+  const [isActive, setIsActive] = useState("home");
 
   const [mobileShowNavMenu, setMobileShowNavMenu] = useState(false);
 
+  const [loading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, [isActive]);
+
+  const loadingHandler = (boolean) => setIsLoading(boolean);
+
+  const routeHandler = (route) => {
+    setIsActive(route);
+    setMobileShowNavMenu(false);
+  };
+  //TODO: Lograr que loading state se vuelva false luego de cargar la pagina para poder volver a ponerlo true
   return (
     <>
       <GlobalStyle />
       <Page>
         <Sidebar
           isActive={isActive}
+          routeHandler={routeHandler}
+          loadingHandler={loadingHandler}
           setIsActive={setIsActive}
           mobileShowNavMenu={mobileShowNavMenu}
           setMobileShowNavMenu={setMobileShowNavMenu}
         />
-        <Layout isActive={isActive} setIsActive={setIsActive} />
+        <Layout
+          isActive={isActive}
+          routeHandler={routeHandler}
+          loading={loading}
+        />
+        <PacmanLoader
+          color="#ffd700"
+          loading={loading}
+          cssOverride={{
+            display: "block",
+            margin: "auto",
+            position: "absolute",
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            animation: "fadeOut 1s 0.5s forwards",
+          }}
+          size={50}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+          speedMultiplier="3"
+        />
       </Page>
     </>
   );

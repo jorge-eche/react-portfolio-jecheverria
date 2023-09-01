@@ -84,7 +84,7 @@ const Header = styled.header`
   }
 `;
 
-const Layout = ({ isActive, setIsActive }) => {
+const Layout = ({ isActive, routeHandler, loading }) => {
   return (
     <Page>
       <TopTag>
@@ -93,28 +93,28 @@ const Layout = ({ isActive, setIsActive }) => {
         <Tag leftmargin="positive">&lt;body&gt;</Tag>
       </TopTag>
 
-      {isActive.home && (
+      {isActive === "home" && (
         <Header>
           {" "}
-          <Home setIsActive={setIsActive} />{" "}
+          <Home routeHandler={routeHandler} />{" "}
         </Header>
       )}
 
-      {isActive.about && (
+      {isActive === "about" && (
         <Header>
           {" "}
           <About />{" "}
         </Header>
       )}
 
-      {isActive.portfolio && (
+      {isActive === "portfolio" && (
         <Header>
           {" "}
           <Portfolio />{" "}
         </Header>
       )}
 
-      {isActive.contact && (
+      {isActive === "contact" && (
         <Header>
           {" "}
           <Contact />{" "}

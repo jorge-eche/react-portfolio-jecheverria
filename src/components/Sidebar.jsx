@@ -15,7 +15,6 @@ import {
 import {
   faLinkedin,
   faGithub,
-  faWhatsapp,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import JE from "../img/je.png";
@@ -235,48 +234,18 @@ const BurgerIcon = styled(FontAwesomeIcon)`
 
 const Sidebar = ({
   isActive,
-  setIsActive,
+  routeHandler,
+  loadingHandler,
   mobileShowNavMenu,
   setMobileShowNavMenu,
 }) => {
-  const activateHome = () => {
-    setIsActive({
-      home: true,
-      about: false,
-      portfolio: false,
-      contact: false,
-    });
-    setMobileShowNavMenu(false);
+  const clickHandler = (route) => {
+    if (isActive !== route) {
+      loadingHandler(false);
+      routeHandler(route);
+    }
   };
 
-  const activateAbout = () => {
-    setIsActive({
-      home: false,
-      about: true,
-      portfolio: false,
-      contact: false,
-    });
-    setMobileShowNavMenu(false);
-  };
-
-  const activatePortfolio = () => {
-    setIsActive({
-      home: false,
-      about: false,
-      portfolio: true,
-      contact: false,
-    });
-    setMobileShowNavMenu(false);
-  };
-  const activateContact = () => {
-    setIsActive({
-      home: false,
-      about: false,
-      portfolio: false,
-      contact: true,
-    });
-    setMobileShowNavMenu(false);
-  };
   return (
     <SideBar>
       <Container mobileShow={mobileShowNavMenu ? "yes" : ""}>
@@ -284,25 +253,25 @@ const Sidebar = ({
         {!mobileShowNavMenu ? <JELogoMobile src={JEBlue} alt="JE" /> : null}
 
         <Nav>
-          <PageLink id="home-link" onClick={activateHome}>
+          <PageLink id="home-link" onClick={() => clickHandler("home")}>
             <StyledFontAwesomeIcon
               icon={faHouse}
               active={isActive.home ? "yes" : ""}
             />
           </PageLink>
-          <PageLink id="about-link" onClick={activateAbout}>
+          <PageLink id="about-link" onClick={() => clickHandler("about")}>
             <StyledFontAwesomeIcon
               icon={faUser}
               active={isActive.about ? "yes" : ""}
             />
           </PageLink>
-          <PageLink id="mywork-link" onClick={activatePortfolio}>
+          <PageLink id="mywork-link" onClick={() => clickHandler("portfolio")}>
             <StyledFontAwesomeIcon
               icon={isActive.portfolio ? faFolderOpen : faFolder}
               active={isActive.portfolio ? "yes" : ""}
             />
           </PageLink>
-          <PageLink id="contact-link" onClick={activateContact}>
+          <PageLink id="contact-link" onClick={() => clickHandler("contact")}>
             <StyledFontAwesomeIcon
               icon={isActive.contact ? faEnvelopeOpen : faEnvelope}
               active={isActive.contact ? "yes" : ""}
@@ -315,19 +284,28 @@ const Sidebar = ({
             <a
               href="https://www.linkedin.com/in/jorge-enrique-echeverr%C3%ADa-402984232/"
               target="_blank"
+              rel="noreferrer"
             >
               <StyledFontAwesomeIcon icon={faLinkedin} />
             </a>
           </ListItem>
 
           <ListItem>
-            <a href="https://github.com/jorge-eche" target="_blank">
+            <a
+              href="https://github.com/jorge-eche"
+              target="_blank"
+              rel="noreferrer"
+            >
               <StyledFontAwesomeIcon icon={faGithub} />
             </a>
           </ListItem>
 
           <ListItem>
-            <a href="https://twitter.com/CokoEche" target="_blank">
+            <a
+              href="https://twitter.com/CokoEche"
+              target="_blank"
+              rel="noreferrer"
+            >
               <StyledFontAwesomeIcon icon={faTwitter} />
             </a>
           </ListItem>
@@ -338,9 +316,7 @@ const Sidebar = ({
           size="3x"
           color={mobileShowNavMenu ? "var(--light-yellow)" : ""}
           onClick={() =>
-            !mobileShowNavMenu
-              ? setMobileShowNavMenu(true)
-              : setMobileShowNavMenu(false)
+            setMobileShowNavMenu((preShowNavMenu) => !preShowNavMenu)
           }
         />
       </Container>
