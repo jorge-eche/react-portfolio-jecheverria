@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import JorgePic from "../img/myphoto.jpg";
+import JorgePic from "../img/Jorge_Echeverria_Photo.jpg";
 
 const AboutPage = styled.div`
   height: 100%;
@@ -145,12 +145,16 @@ const ContainerPhoto = styled.div`
 
 const Photo = styled.img`
   width: 400px;
+  height: 400px;
   border-radius: 50%;
+  box-shadow: 10px 10px 12px 0px black;
   @media screen and (min-width: 601px) and (max-width: 1500px) {
     width: 300px;
+    height: 300px;
   }
   @media screen and (max-width: 600px) {
     width: 130px;
+    height: 130px;
   }
 `;
 
@@ -164,17 +168,14 @@ const About = () => {
         <ContainerP>
           {" "}
           <Paragraph>
-            Hi there! My name is Jorge and I am an ambitious frontend developer
-            looking for a role on an established IT company that gives me the
-            opportunity to work with the latest technologies on challenging and
-            diverse projects .
+            Hi there! My name is Jorge and I am a curious, proactive and
+            detail-oriented self-taught Web Developer looking for a role on an
+            established IT company that gives me the opportunity to work with
+            the latest technologies on challenging and diverse projects.
           </Paragraph>
           <Paragraph>
-            I discovered my passion for programming after many fellow
-            programmers insisted that my personality would 100% suit this
-            profession so I decided to give it a try and the rest is History: I
-            fell in love with coding and the possibility it gives me to unleash
-            my creativity and logical abilities; also its amazing capacity to
+            I fell in love with coding and the possibility it gives to unleash
+            both creativity and logical abilities; also its amazing capacity to
             solve real human being's problems and needs.
           </Paragraph>
           <Paragraph>
@@ -183,11 +184,12 @@ const About = () => {
           </Paragraph>
           <UlTech>
             <li>⚙️React</li>
-            <li>⚙️JavaScript</li>
+            <li>⚙️TypeScript</li>
+            <li>⚙️JavaScript (+ES6)</li>
             <li>⚙️HTML5</li>
             <li>⚙️CSS3</li>
             <li>⚙️Node.js</li>
-            <li>Express.js</li>
+            <li>⚙️Express.js</li>
             <li>⚙️PostgreSQL</li>
           </UlTech>
         </ContainerP>
