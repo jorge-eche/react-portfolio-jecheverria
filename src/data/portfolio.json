@@ -17,7 +17,8 @@
     "url": "https://reactdummymeals.netlify.app/",
     "code": "https://github.com/jorge-eche/react-meals"
   },
-      "id": "3",
+  {
+    "id": "3",
     "image": "/portfolio/crowdfunding-screenshot.png",
     "title": "Crowdfunding Product Page",
     "description": "React app that emulates a crowdfunding website and allows visitors to make pledges",
