@@ -157,7 +157,7 @@ const ContactButton = styled.button`
   }
 `;
 
-const Home = ({ routeHandler }) => {
+const Home = ({ routeChangeHandler }) => {
   return (
     <HomePage>
       <Title>
@@ -165,7 +165,7 @@ const Home = ({ routeHandler }) => {
         <br /> My name is <span>Jorge Echeverría</span> <br />
         I'm a <TypedOut></TypedOut>
       </Title>
-      <ContactButton onClick={() => routeHandler("contact")}>
+      <ContactButton onClick={() => routeChangeHandler("contact")}>
         Contact Me
       </ContactButton>
     </HomePage>

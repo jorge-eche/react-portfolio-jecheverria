@@ -233,18 +233,10 @@ const BurgerIcon = styled(FontAwesomeIcon)`
 
 const Sidebar = ({
   isActive,
-  routeHandler,
-  loadingHandler,
+  routeChangeHandler,
   mobileShowNavMenu,
   setMobileShowNavMenu,
 }) => {
-  const clickHandler = (route) => {
-    if (isActive !== route) {
-      loadingHandler(false);
-      routeHandler(route);
-    }
-  };
-
   return (
     <SideBar>
       <Container mobileShow={mobileShowNavMenu ? "yes" : ""}>
@@ -252,25 +244,31 @@ const Sidebar = ({
         {!mobileShowNavMenu ? <JELogoMobile src={JEBlue} alt="JE" /> : null}
 
         <Nav>
-          <PageLink id="home-link" onClick={() => clickHandler("home")}>
+          <PageLink id="home-link" onClick={() => routeChangeHandler("home")}>
             <StyledFontAwesomeIcon
               icon={faHouse}
               active={isActive.home ? "yes" : ""}
             />
           </PageLink>
-          <PageLink id="about-link" onClick={() => clickHandler("about")}>
+          <PageLink id="about-link" onClick={() => routeChangeHandler("about")}>
             <StyledFontAwesomeIcon
               icon={faUser}
               active={isActive.about ? "yes" : ""}
             />
           </PageLink>
-          <PageLink id="mywork-link" onClick={() => clickHandler("portfolio")}>
+          <PageLink
+            id="mywork-link"
+            onClick={() => routeChangeHandler("portfolio")}
+          >
             <StyledFontAwesomeIcon
               icon={isActive.portfolio ? faFolderOpen : faFolder}
               active={isActive.portfolio ? "yes" : ""}
             />
           </PageLink>
-          <PageLink id="contact-link" onClick={() => clickHandler("contact")}>
+          <PageLink
+            id="contact-link"
+            onClick={() => routeChangeHandler("contact")}
+          >
             <StyledFontAwesomeIcon
               icon={isActive.contact ? faEnvelopeOpen : faEnvelope}
               active={isActive.contact ? "yes" : ""}

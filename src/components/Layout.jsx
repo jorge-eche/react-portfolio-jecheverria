@@ -84,7 +84,7 @@ const Header = styled.header`
   }
 `;
 
-const Layout = ({ isActive, routeHandler, loading }) => {
+const Layout = ({ isActive, routeChangeHandler, loading }) => {
   return (
     <Page>
       <TopTag>
@@ -96,7 +96,7 @@ const Layout = ({ isActive, routeHandler, loading }) => {
       {isActive === "home" && (
         <Header>
           {" "}
-          <Home routeHandler={routeHandler} />{" "}
+          <Home routeChangeHandler={routeChangeHandler} />{" "}
         </Header>
       )}
 

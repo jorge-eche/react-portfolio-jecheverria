@@ -60,11 +60,14 @@ function App() {
     setIsLoading(true);
   }, [isActive]);
 
-  const loadingHandler = (boolean) => setIsLoading(boolean);
+  // const loadingHandler = (boolean) => setIsLoading(boolean);
 
-  const routeHandler = (route) => {
-    setIsActive(route);
-    setMobileShowNavMenu(false);
+  const routeChangeHandler = (route) => {
+    if (isActive !== route) {
+      setIsLoading(false);
+      setIsActive(route);
+      setMobileShowNavMenu(false);
+    }
   };
   //TODO: Lograr que loading state se vuelva false luego de cargar la pagina para poder volver a ponerlo true
   return (
@@ -73,15 +76,14 @@ function App() {
       <Page>
         <Sidebar
           isActive={isActive}
-          routeHandler={routeHandler}
-          loadingHandler={loadingHandler}
+          routeChangeHandler={routeChangeHandler}
           setIsActive={setIsActive}
           mobileShowNavMenu={mobileShowNavMenu}
           setMobileShowNavMenu={setMobileShowNavMenu}
         />
         <Layout
           isActive={isActive}
-          routeHandler={routeHandler}
+          routeChangeHandler={routeChangeHandler}
           loading={loading}
         />
         <PacmanLoader
