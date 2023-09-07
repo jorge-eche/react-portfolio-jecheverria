@@ -1,8 +1,6 @@
-import React, { useRef } from "react";
 import styled from "styled-components";
-import emailjs from "@emailjs/browser";
 
-const ContactPage = styled.div`
+export const ContactPage = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -11,7 +9,7 @@ const ContactPage = styled.div`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
@@ -75,7 +73,7 @@ const Title = styled.h1`
   }
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -97,7 +95,7 @@ const Container = styled.div`
   }
 `;
 
-const Form = styled.form`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   input[type="submit"] {
@@ -136,7 +134,7 @@ const Form = styled.form`
   }
 `;
 
-const FieldHalf = styled.div`
+export const FieldHalf = styled.div`
   display: flex;
   gap: 0.5rem;
   margin-bottom: 10px;
@@ -145,7 +143,7 @@ const FieldHalf = styled.div`
   }
 `;
 
-const FieldUpper = styled.div`
+export const FieldUpper = styled.div`
   width: ${(props) => (props.variant === "email" ? "50%" : "calc(50% - 10px)")};
   input[type="text"],
   input[type="email"] {
@@ -163,7 +161,7 @@ const FieldUpper = styled.div`
   }
 `;
 
-const Field = styled.div`
+export const Field = styled.div`
   margin-bottom: 10px;
   input[type="text"] {
     background-color: var(--dark-cerulean);
@@ -195,7 +193,7 @@ const Field = styled.div`
   }
 `;
 
-const ParagraphContainer = styled.div`
+export const ParagraphContainer = styled.div`
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 600px) {
@@ -203,7 +201,7 @@ const ParagraphContainer = styled.div`
   }
 `;
 
-const Paragraph = styled.p`
+export const Paragraph = styled.p`
   text-align: justify;
   text-justify: inter-word;
   letter-spacing: 1px;
@@ -217,7 +215,7 @@ const Paragraph = styled.p`
   }
 `;
 
-const Thanks = styled.p`
+export const Thanks = styled.p`
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: auto;
@@ -232,108 +230,3 @@ const Thanks = styled.p`
     margin-top: 0;
   }
 `;
-
-const Contact = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_4oha58h",
-        "template_jao2xp7",
-        form.current,
-        "c_AW7MwZbdHhXZPgq"
-      )
-      .then(
-        (result) => {
-          alert("Message succesfully sent, thanks!");
-          window.location.reload(false);
-        },
-        (error) => {
-          alert("Failed to send the message, please try again");
-        }
-      );
-  };
-
-  return (
-    <ContactPage>
-      <Title>Contact me</Title>
-
-      <Container>
-        {" "}
-        <Form ref={form} onSubmit={sendEmail}>
-          <FieldHalf>
-            <FieldUpper>
-              <label htmlFor="name">
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  required
-                />
-              </label>
-            </FieldUpper>
-
-            <FieldUpper variant="email">
-              <label htmlFor="email">
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
-              </label>
-            </FieldUpper>
-          </FieldHalf>
-
-          <Field>
-            <label htmlFor="subject">
-              <input
-                id="subject"
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                required
-              />
-            </label>
-          </Field>
-
-          <Field>
-            <label htmlFor="message">
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Message"
-                rows="8"
-                required
-              ></textarea>
-            </label>
-          </Field>
-
-          <input type="submit" value="Send" />
-        </Form>
-        <ParagraphContainer>
-          <Paragraph>
-            If you have a project that you would like to discuss or have any
-            questions about my work, please don't hesitate to contact me.
-          </Paragraph>
-          <Paragraph>
-            I look forward to hearing from you and working together on your next
-            project.
-          </Paragraph>
-          <Paragraph>
-            I will make sure to respond to your inquiry as soon as possible.
-          </Paragraph>
-
-          <Thanks>Thank you for visiting my portfolio! </Thanks>
-        </ParagraphContainer>
-      </Container>
-    </ContactPage>
-  );
-};
-
-export default Contact;

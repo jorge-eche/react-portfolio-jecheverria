@@ -1,15 +1,7 @@
-import { useState, useEffect } from "react";
 import styled from "styled-components";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
-import Projects from "../data/portfolio.json";
 
-const PortfolioPage = styled.div`
+export const PortfolioPage = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -18,7 +10,7 @@ const PortfolioPage = styled.div`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
@@ -82,7 +74,7 @@ const Title = styled.h1`
   }
 `;
 
-const Slider = styled.div`
+export const Slider = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -103,7 +95,7 @@ const Slider = styled.div`
   }
 `;
 
-const ContainerArrowsMobile = styled.div`
+export const ContainerArrowsMobile = styled.div`
   @media screen and (max-width: 600px) {
     width: 100%;
     display: flex;
@@ -115,7 +107,7 @@ const ContainerArrowsMobile = styled.div`
   }
 `;
 
-const ArrowIcon = styled(FontAwesomeIcon)`
+export const ArrowIcon = styled(FontAwesomeIcon)`
   font-size: 20px;
   height: 51px;
   display: ${(props) =>
@@ -137,7 +129,7 @@ const ArrowIcon = styled(FontAwesomeIcon)`
   }
 `;
 
-const ProjectContainer = styled.div`
+export const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,7 +144,7 @@ const ProjectContainer = styled.div`
   }
 `;
 
-const ProjectImage = styled.img`
+export const ProjectImage = styled.img`
   width: 400px;
   height: 200px;
   margin-bottom: 30px;
@@ -170,7 +162,7 @@ const ProjectImage = styled.img`
   }
 `;
 
-const ProjectTitle = styled.h1`
+export const ProjectTitle = styled.h1`
   color: var(--light-yellow);
   margin-bottom: 15px;
   &:after {
@@ -193,7 +185,7 @@ const ProjectTitle = styled.h1`
   }
 `;
 
-const Description = styled.h2`
+export const Description = styled.h2`
   font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 15px;
@@ -211,7 +203,7 @@ const Description = styled.h2`
   }
 `;
 
-const Techs = styled.h3`
+export const Techs = styled.h3`
   opacity: 0.8;
   @media screen and (min-width: 601px) and (max-width: 1500px) {
     font-size: 0.7rem;
@@ -226,7 +218,7 @@ const Techs = styled.h3`
   }
 `;
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
@@ -236,7 +228,7 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const Link = styled.a`
+export const Link = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -268,80 +260,3 @@ const Link = styled.a`
     font-size: 0.8rem;
   }
 `;
-
-const Portfolio = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-    });
-  }, []);
-
-  const [current, setCurrent] = useState(0);
-  //State for changing the flip side animation on ProjectImage, depending on ArrowIcon clicked
-  const [isRight, setIsRight] = useState(true);
-
-  const slideLeft = () => {
-    setIsRight(false);
-    if (current - 1 === -1) {
-      setCurrent(Projects.length - 1);
-    } else {
-      setCurrent(current - 1);
-    }
-  };
-
-  const slideRight = () => {
-    setIsRight(true);
-    if (current + 1 === Projects.length) {
-      setCurrent(0);
-    } else {
-      setCurrent(current + 1);
-    }
-  };
-
-  return (
-    <PortfolioPage>
-      {" "}
-      <Title>My Portfolio</Title>
-      <Slider>
-        {" "}
-        <ArrowIcon
-          variant="left-desktop"
-          icon={faCircleArrowLeft}
-          onClick={slideLeft}
-        />
-        {Projects.map((project, index) =>
-          index === current ? (
-            <ProjectContainer
-              data-aos={isRight ? "flip-left" : "flip-right"}
-              data-aos-duration="2000"
-              key={project.id}
-            >
-              <ProjectImage src={project.image} alt="Project image" />
-              <ProjectTitle>{project.title}</ProjectTitle>
-              <Description>{project.description}</Description>
-              <Techs>{project.techs}</Techs>
-              <ButtonContainer>
-                <Link href={project.url} target="_blank">
-                  See Live
-                </Link>{" "}
-                <Link href={project.code} target="_blank" variant="right">
-                  Source Code
-                </Link>
-              </ButtonContainer>
-            </ProjectContainer>
-          ) : null
-        )}
-        <ContainerArrowsMobile>
-          <ArrowIcon
-            variant="left-mobile"
-            icon={faCircleArrowLeft}
-            onClick={slideLeft}
-          />
-          <ArrowIcon icon={faCircleArrowRight} onClick={slideRight} />
-        </ContainerArrowsMobile>
-      </Slider>
-    </PortfolioPage>
-  );
-};
-
-export default Portfolio;

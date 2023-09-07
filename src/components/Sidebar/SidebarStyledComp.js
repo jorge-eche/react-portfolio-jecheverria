@@ -1,25 +1,7 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faUser,
-  faEnvelope,
-  faEnvelopeOpen,
-  faFolder,
-  faFolderOpen,
-  faBars,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
 
-import {
-  faLinkedin,
-  faGithub,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import JE from "../img/je.png";
-import JEBlue from "../img/jebluebackground.png";
-
-const SideBar = styled.div`
+export const SideBar = styled.div`
   background-color: var(--dark-red);
   width: 60px;
   height: 100vh;
@@ -30,7 +12,7 @@ const SideBar = styled.div`
   }
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
@@ -123,7 +105,7 @@ const Container = styled.div`
     }`}
 `;
 
-const JELogo = styled.img`
+export const JELogo = styled.img`
   display: block;
   width: 60px;
   @media screen and (max-width: 600px) {
@@ -131,7 +113,7 @@ const JELogo = styled.img`
   }
 `;
 
-const JELogoMobile = styled.img`
+export const JELogoMobile = styled.img`
   display: none;
 
   @media screen and (max-width: 600px) {
@@ -140,7 +122,7 @@ const JELogoMobile = styled.img`
   }
 `;
 
-const Nav = styled.nav`
+export const Nav = styled.nav`
   text-align: center;
   display: block;
   height: 210px;
@@ -150,7 +132,7 @@ const Nav = styled.nav`
   }
 `;
 
-const PageLink = styled.a`
+export const PageLink = styled.a`
   position: relative;
   display: block;
   font-size: 22px;
@@ -191,12 +173,12 @@ const PageLink = styled.a`
   }
 `;
 
-const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: ${(props) =>
     props.active === "yes" ? "var(--light-yellow)" : "var(--gun-powder)"};
 `;
 
-const UList = styled.ul`
+export const UList = styled.ul`
   width: 100%;
   list-style: none;
   text-align: center;
@@ -205,7 +187,7 @@ const UList = styled.ul`
   }
 `;
 
-const ListItem = styled.li`
+export const ListItem = styled.li`
   a {
     padding: 7px 0;
     display: block;
@@ -221,7 +203,7 @@ const ListItem = styled.li`
   }
 `;
 
-const BurgerIcon = styled(FontAwesomeIcon)`
+export const BurgerIcon = styled(FontAwesomeIcon)`
   display: none;
   @media screen and (max-width: 600px) {
     display: initial;
@@ -230,95 +212,3 @@ const BurgerIcon = styled(FontAwesomeIcon)`
     }
   }
 `;
-
-const Sidebar = ({
-  isActive,
-  routeChangeHandler,
-  mobileShowNavMenu,
-  setMobileShowNavMenu,
-}) => {
-  return (
-    <SideBar>
-      <Container mobileShow={mobileShowNavMenu ? "yes" : ""}>
-        <JELogo src={JE} alt="JE" />
-        {!mobileShowNavMenu ? <JELogoMobile src={JEBlue} alt="JE" /> : null}
-
-        <Nav>
-          <PageLink id="home-link" onClick={() => routeChangeHandler("home")}>
-            <StyledFontAwesomeIcon
-              icon={faHouse}
-              active={isActive === "home" ? "yes" : ""}
-            />
-          </PageLink>
-          <PageLink id="about-link" onClick={() => routeChangeHandler("about")}>
-            <StyledFontAwesomeIcon
-              icon={faUser}
-              active={isActive === "about" ? "yes" : ""}
-            />
-          </PageLink>
-          <PageLink
-            id="mywork-link"
-            onClick={() => routeChangeHandler("portfolio")}
-          >
-            <StyledFontAwesomeIcon
-              icon={isActive === "portfolio" ? faFolderOpen : faFolder}
-              active={isActive === "portfolio" ? "yes" : ""}
-            />
-          </PageLink>
-          <PageLink
-            id="contact-link"
-            onClick={() => routeChangeHandler("contact")}
-          >
-            <StyledFontAwesomeIcon
-              icon={isActive === "contact" ? faEnvelopeOpen : faEnvelope}
-              active={isActive === "contact" ? "yes" : ""}
-            />
-          </PageLink>
-        </Nav>
-
-        <UList>
-          <ListItem>
-            <a
-              href="https://www.linkedin.com/in/jorge-enrique-echeverr%C3%ADa-402984232/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <StyledFontAwesomeIcon icon={faLinkedin} />
-            </a>
-          </ListItem>
-
-          <ListItem>
-            <a
-              href="https://github.com/jorge-eche"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <StyledFontAwesomeIcon icon={faGithub} />
-            </a>
-          </ListItem>
-
-          <ListItem>
-            <a
-              href="https://twitter.com/CokoEche"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <StyledFontAwesomeIcon icon={faTwitter} />
-            </a>
-          </ListItem>
-        </UList>
-
-        <BurgerIcon
-          icon={mobileShowNavMenu ? faXmark : faBars}
-          size="3x"
-          color={mobileShowNavMenu ? "var(--light-yellow)" : ""}
-          onClick={() =>
-            setMobileShowNavMenu((preShowNavMenu) => !preShowNavMenu)
-          }
-        />
-      </Container>
-    </SideBar>
-  );
-};
-
-export default Sidebar;

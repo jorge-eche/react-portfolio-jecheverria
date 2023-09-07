@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-const HomePage = styled.div`
+export const HomePage = styled.div`
   height: 100%;
   text-align: center;
   display: flex;
@@ -13,7 +12,7 @@ const HomePage = styled.div`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: 5rem;
   font-family: "Coolvetica", Helvetica;
   font-weight: 400;
@@ -74,7 +73,7 @@ const Title = styled.h1`
   }
 `;
 
-const TypedOut = styled.span`
+export const TypedOut = styled.span`
   &:before {
     content: "";
     vertical-align: top;
@@ -135,7 +134,7 @@ const TypedOut = styled.span`
   }
 `;
 
-const ContactButton = styled.button`
+export const ContactButton = styled.button`
   margin-top: 60px;
   opacity: 0.9;
   color: var(--light-yellow);
@@ -156,20 +155,3 @@ const ContactButton = styled.button`
     margin-top: initial;
   }
 `;
-
-const Home = ({ routeChangeHandler }) => {
-  return (
-    <HomePage>
-      <Title>
-        Hello!
-        <br /> My name is <span>Jorge Echeverría</span> <br />
-        I'm a <TypedOut></TypedOut>
-      </Title>
-      <ContactButton onClick={() => routeChangeHandler("contact")}>
-        Contact Me
-      </ContactButton>
-    </HomePage>
-  );
-};
-
-export default Home;
