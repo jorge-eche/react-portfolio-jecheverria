@@ -247,13 +247,13 @@ const Sidebar = ({
           <PageLink id="home-link" onClick={() => routeChangeHandler("home")}>
             <StyledFontAwesomeIcon
               icon={faHouse}
-              active={isActive.home ? "yes" : ""}
+              active={isActive === "home" ? "yes" : ""}
             />
           </PageLink>
           <PageLink id="about-link" onClick={() => routeChangeHandler("about")}>
             <StyledFontAwesomeIcon
               icon={faUser}
-              active={isActive.about ? "yes" : ""}
+              active={isActive === "about" ? "yes" : ""}
             />
           </PageLink>
           <PageLink
@@ -261,8 +261,8 @@ const Sidebar = ({
             onClick={() => routeChangeHandler("portfolio")}
           >
             <StyledFontAwesomeIcon
-              icon={isActive.portfolio ? faFolderOpen : faFolder}
-              active={isActive.portfolio ? "yes" : ""}
+              icon={isActive === "portfolio" ? faFolderOpen : faFolder}
+              active={isActive === "portfolio" ? "yes" : ""}
             />
           </PageLink>
           <PageLink
@@ -270,8 +270,8 @@ const Sidebar = ({
             onClick={() => routeChangeHandler("contact")}
           >
             <StyledFontAwesomeIcon
-              icon={isActive.contact ? faEnvelopeOpen : faEnvelope}
-              active={isActive.contact ? "yes" : ""}
+              icon={isActive === "contact" ? faEnvelopeOpen : faEnvelope}
+              active={isActive === "contact" ? "yes" : ""}
             />
           </PageLink>
         </Nav>
