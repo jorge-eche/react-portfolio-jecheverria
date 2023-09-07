@@ -143,16 +143,16 @@ export const ContainerPhoto = styled.div`
 `;
 
 export const Photo = styled.img`
-  width: 400px;
-  height: 400px;
+  width: 396px;
+  height: 330px;
   border-radius: 50%;
   box-shadow: 10px 10px 12px 0px black;
   @media screen and (min-width: 601px) and (max-width: 1500px) {
     width: 300px;
-    height: 300px;
+    height: 250px;
   }
   @media screen and (max-width: 600px) {
-    width: 130px;
-    height: 130px;
+    width: 138px;
+    height: 115px;
   }
 `;
